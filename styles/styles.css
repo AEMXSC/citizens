@@ -103,16 +103,16 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.15;
   color: var(--text-color);
   scroll-margin: 40px;
 }
 
-/* Citizens display headings (h1/h2) use the Addington serif */
+/* Citizens display headings are Fira Sans bold */
 h1,
 h2 {
-  font-weight: 300;
+  font-weight: 700;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -203,17 +203,17 @@ button.button:disabled {
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--brand-navy-border);
-  background-color: transparent;
-  color: var(--link-color);
+  border-color: var(--cta-color);
+  background-color: var(--cta-color);
+  color: #fff;
 }
 
 a.button.primary:hover,
 a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--brand-navy);
-  background-color: var(--brand-navy);
+  border-color: var(--cta-hover);
+  background-color: var(--cta-hover);
   color: #fff;
 }
 
@@ -258,17 +258,17 @@ button.button.secondary:disabled:focus-visible {
 /* high-impact call-to-action */
 a.button.accent,
 button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+  border-color: var(--cta-color);
+  background-color: var(--cta-color);
+  color: #fff;
 }
 
 a.button.accent:hover,
 a.button.accent:focus-visible,
 button.button.accent:hover,
 button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+  border-color: var(--cta-hover);
+  background-color: var(--cta-hover);
 }
 
 a.button.accent[aria-disabled="true"],

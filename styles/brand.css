@@ -1,9 +1,10 @@
 /* stylelint-disable max-line-length */
 
 /* Citizens Bank brand design system — extracted from citizensbank.com.
-   Body: Fira Sans. Display: Addington (serif). Primary: Citizens green #008555.
-   Fonts hotlinked from Citizens' asset host for the demo (verified 200); swap
-   for self-host or a licensed kit for durability. */
+   Type is Fira Sans throughout (headings are Fira Sans BOLD, not a serif —
+   matching the real site). Brand green #008555 for logo/accents; orange
+   #d93d00 for CTAs; blue #044da2 for inline links. Fonts hotlinked from
+   Citizens' asset host for the demo (verified 200). */
 
 @font-face {
   font-family: "fira sans";
@@ -24,36 +25,50 @@
 @font-face {
   font-family: "fira sans";
   font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "fira sans";
+  font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: addington;
+  font-family: "fira sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/addington/AddingtonCF-DemiBold.woff2") format("woff2");
+  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Bold.woff") format("woff");
 }
 
 :root {
-  /* brand fonts */
-  --heading-font-family: addington, georgia, "Times New Roman", serif;
-  --body-font-family: "fira sans", arial, helvetica, sans-serif;
+  /* brand fonts — Fira Sans everywhere; headings are the bold weight */
+  --heading-font-family: "fira sans", arial, "Helvetica Neue", helvetica, sans-serif;
+  --body-font-family: "fira sans", arial, "Helvetica Neue", helvetica, sans-serif;
 
   /* brand colors */
   --background-color: #fff;
   --text-color: #231f20;
   --text-muted-color: #636262;
-  --link-color: #008555;
-  --link-hover-color: #004f33;
+  --link-color: #044da2;        /* Citizens blue for inline text links */
+  --link-hover-color: #003a7a;
 
-  /* brand palette. Names kept as-is so existing block CSS keeps resolving;
-     values repointed to the Citizens palette (green primary, deep green,
-     blue secondary, warm accent). */
-  --brand-navy: #004f33;        /* legacy alias -> Citizens deep green */
-  --brand-navy-border: #008555; /* legacy alias -> Citizens green */
+  /* brand palette */
+  --brand-green: #008555;
+  --brand-green-dark: #004f33;
+  --cta-color: #d93d00;         /* Citizens orange CTA */
+  --cta-hover: #ad3000;
+  --cta-active: #561800;
+  --hero-bg: #f2f1ec;           /* warm light neutral hero panel */
+
+  /* legacy aliases kept so existing block CSS keeps resolving */
+  --brand-navy: #004f33;
+  --brand-navy-border: #008555;
   --section-light-blue: #eaf3ff;
   --section-peach: #ffe8cf;
   --section-green: #e9f4ee;
@@ -63,5 +78,3 @@
   --content-max-width: 1200px;
   --nav-height: 80px;
 }
-
-/* code-sync 20260722 */

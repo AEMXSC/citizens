@@ -23,9 +23,11 @@
 
 .feature-grid .feature-grid-card-body h3 {
   font-family: var(--heading-font-family);
-  color: var(--brand-navy, #004f33);
-  font-size: 20px;
-  margin: 0 0 8px;
+  font-weight: 700;
+  color: var(--text-color, #231f20);
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 10px;
 }
 
 .feature-grid .feature-grid-card-body p {

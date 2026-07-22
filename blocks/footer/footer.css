@@ -1,6 +1,11 @@
 /* stylelint-disable no-descending-specificity */
+
+/* Citizens footer. Content is a flat sequence of heading <p> + link <ul> pairs,
+   followed by legal <p>s. We flow the pairs into columns and pull the legal
+   text (a <p> NOT followed by a <ul>) full-width at the bottom. */
+
 footer {
-  background-color: var(--brand-navy, #000a62);
+  background-color: var(--brand-green-dark, #004f33);
   color: #fff;
   font-size: 14px;
 }
@@ -8,48 +13,34 @@ footer {
 footer > div {
   max-width: var(--content-max-width, 1200px);
   margin: auto;
-  padding: 48px 24px 32px;
+  padding: 48px 24px 40px;
+}
+
+footer .default-content-wrapper {
+  columns: 4 200px;
+  column-gap: 40px;
 }
 
 footer p {
   margin: 0;
 }
 
-/* First fragment section: the link columns. Fragment loading wraps each
-   top-level footer div in a .section > .default-content-wrapper, so the grid
-   must sit on the wrapper that directly holds the four column divs. */
-footer .section:first-child .default-content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-}
-
-@media (width >= 600px) {
-  footer .section:first-child .default-content-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width >= 900px) {
-  footer .section:first-child .default-content-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Column headings (GET IN TOUCH, CUSTOMER SERVICE, …) */
-footer .section:first-child .default-content-wrapper > div > p:first-child {
+/* Column heading: a <p> immediately followed by its link list. */
+footer .default-content-wrapper p:has(+ ul) {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgb(255 255 255 / 70%);
-  margin-bottom: 12px;
+  color: rgb(255 255 255 / 75%);
+  margin-bottom: 10px;
+  break-after: avoid;
 }
 
 footer ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 28px;
   padding: 0;
+  break-inside: avoid;
 }
 
 footer li {
@@ -65,31 +56,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Bottom fragment section: phone, copyright, legal */
-footer .section:last-child .default-content-wrapper {
-  margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid rgb(255 255 255 / 20%);
-  color: rgb(255 255 255 / 80%);
-}
-
-footer .section:last-child .default-content-wrapper p:first-child {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-footer .section:last-child .default-content-wrapper p:nth-child(2) {
+/* Legal paragraphs (not followed by a list) span all columns at the bottom. */
+footer .default-content-wrapper p:not(:has(+ ul)) {
+  column-span: all;
   font-size: 12px;
   line-height: 1.5;
-  margin-bottom: 12px;
+  color: rgb(255 255 255 / 80%);
+  margin-top: 8px;
 }
-
-footer .section:last-child .default-content-wrapper p:last-child {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font-size: 12px;
-}
-
-/* code-sync 20260722 */
