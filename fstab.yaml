@@ -1,14 +1,10 @@
-# INTERIM: Document Authoring (DA) mount for testing NOW, no AEM author site
-# required. Author the homepage in da.live/AEMXSC/citizens and it renders at
-# https://main--citizens--aemxsc.aem.page/. The same blocks are used in both
-# modes.
+# Content Authoring (DA) mount. Matches the working aemxsc DA sites (e.g.
+# xscteamsite): expanded form with type: markup and no trailing slash.
 #
-# LATER (switch to UE/AEM crosswalk once the AEM author citizens site exists,
-# then upload the content package): replace the mountpoint below with
-#   /:
-#     url: "https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main"
-#     type: "markup"
-#     suffix: ".html"
-
+# LATER (UE/AEM crosswalk, once the AEM author citizens site exists): swap url to
+#   https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main
+# keep type: markup and add suffix: ".html".
 mountpoints:
-  /: "https://content.da.live/AEMXSC/citizens/"
+  /:
+    url: https://content.da.live/AEMXSC/citizens
+    type: markup
