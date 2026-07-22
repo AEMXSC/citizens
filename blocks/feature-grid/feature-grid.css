@@ -53,13 +53,13 @@
 }
 
 /* icon variant: small centered mark above the text */
-.feature-grid.icon .feature-grid-card-media {
+.feature-grid.compact .feature-grid-card-media {
   width: 56px;
   height: 56px;
   margin-bottom: 16px;
 }
 
-.feature-grid.icon .feature-grid-card-media img {
+.feature-grid.compact .feature-grid-card-media img {
   width: 56px;
   height: 56px;
   object-fit: contain;
