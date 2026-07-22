@@ -5,11 +5,11 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     // Drop the empty cell the optional image alt / blank fields can leave behind.
-    if (row.children.length === 0 && row.textContent.trim() === '' && !row.querySelector('picture')) {
+    if (row.children.length === 0 && row.textContent.trim() === '' && !row.querySelector('picture, img')) {
       row.remove();
       return;
     }
-    row.classList.add(row.querySelector('picture') ? 'hero-commercial-media' : 'hero-commercial-content');
+    row.classList.add(row.querySelector('picture, img') ? 'hero-commercial-media' : 'hero-commercial-content');
   });
 }
 

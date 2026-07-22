@@ -15,7 +15,7 @@ export default function decorate(block) {
         div.remove();
         return;
       }
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'feature-grid-card-media';
+      if (div.children.length === 1 && div.querySelector('picture, img')) div.className = 'feature-grid-card-media';
       else div.className = 'feature-grid-card-body';
     });
     const link = li.querySelector('a[href]');
