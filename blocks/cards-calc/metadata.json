@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-calc",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "tool",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + label, whole-card link with arrow",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "compact icon + label link cards",
+      "tool/calculator navigation rows"
+    ],
+    "notSuitableFor": [
+      "large image cards",
+      "text-heavy cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T07:46:00.000Z"
+  }
+}

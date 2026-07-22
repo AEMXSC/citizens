@@ -1,0 +1,39 @@
+{
+  "variantName": "email-subscribe",
+  "baseBlock": "email-subscribe",
+  "version": "1.0.0",
+  "created": "2026-07-21T08:07:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/products/insurance",
+    "originPage": "product-page (insurance)",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "email-capture",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "eyebrow + heading + supporting paragraph + email input with submit button",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "newsletter / email subscribe modules",
+      "inline email capture panels",
+      "lead-gen email opt-in strips"
+    ],
+    "notSuitableFor": [
+      "multi-field forms (use a form block)",
+      "CTA link teasers (use hero-promo)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/products/insurance"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T08:07:00.000Z",
+    "isNewBaseBlock": true
+  }
+}

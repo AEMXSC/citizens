@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "url": "http://localhost:8899/index.html",
+  "path": "index.html",
+  "timestamp": "2026-07-21T09:13:59.844Z",
+  "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8899/index.html\nCall log:\n  - navigating to \"http://localhost:8899/index.html\", waiting until \"domcontentloaded\"\n",
+  "errorStack": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8899/index.html\nCall log:\n  - navigating to \"http://localhost:8899/index.html\", waiting until \"domcontentloaded\"\n\n    at processUrl (/home/node/.excat-marketplaces/excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:441:18)\n    at async main (/home/node/.excat-marketplaces/excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:621:22)"
+}

@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + short description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["icon-led feature/benefit card rows", "value proposition trios"],
+    "notSuitableFor": ["image-forward article cards", "no-image link cards"]
+  },
+  "usage": {
+    "pagesUsing": ["/index", "/products/insurance"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-21T08:07:00.000Z"
+  }
+}

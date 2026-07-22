@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "http://localhost:8899/index.html",
+  "path": "index",
+  "timestamp": "2026-07-21T16:47:47.099Z",
+  "title": "Trusted Guidance and Protection | New York Life Insurance",
+  "template": "homepage",
+  "blocks": [
+    "hero-billboard",
+    "hero-promo",
+    "hero-promo",
+    "cards-feature",
+    "cards-announce",
+    "cards-product",
+    "cards-editorial",
+    "cards-editorial",
+    "cards-calc",
+    "columns-stats"
+  ]
+}

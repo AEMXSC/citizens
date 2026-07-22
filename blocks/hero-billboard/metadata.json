@@ -1,0 +1,31 @@
+{
+  "variantName": "hero-billboard",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + eyebrow + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["homepage billboards", "landing page top banners with photographic background"],
+    "notSuitableFor": ["dark promo strips", "text-only intros"]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T07:46:00.000Z"
+  }
+}

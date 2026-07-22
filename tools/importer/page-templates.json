@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.newyorklife.com/"
+      ],
+      "representativeUrl": "https://www.newyorklife.com/",
+      "coverageGaps": [],
+      "description": "Corporate homepage: hero billboard with image and CTA, promo/announcement banners, personalized-guidance intro with 3 feature cards, products & solutions link cards, financial insights article cards + calculator link cards, about-us stats section, community impact cards, and a closing CTA teaser.",
+      "blocks": [
+        {
+          "name": "hero-billboard",
+          "instances": ["section[data-section='hero']"]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            "section[data-section='promo-assist']",
+            "section[data-section='community-impact'] .cta-teaser"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": ["section[data-section='personalized-guidance'] .feature-cards"]
+        },
+        {
+          "name": "cards-announce",
+          "instances": ["section[data-section='announcement']"]
+        },
+        {
+          "name": "cards-product",
+          "instances": ["section[data-section='products-solutions'] .product-cards"]
+        },
+        {
+          "name": "cards-editorial",
+          "instances": [
+            "section[data-section='financial-insights'] .article-cards",
+            "section[data-section='community-impact'] .community-cards"
+          ]
+        },
+        {
+          "name": "cards-calc",
+          "instances": ["section[data-section='financial-insights'] .calculator-cards"]
+        },
+        {
+          "name": "columns-stats",
+          "instances": ["section[data-section='about-stats'] .stats-grid"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s2",
+          "name": "promo-assist",
+          "selector": "section[data-section='promo-assist']",
+          "style": "dark",
+          "blocks": ["hero-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "s4",
+          "name": "announcement",
+          "selector": "section[data-section='announcement']",
+          "style": null,
+          "blocks": ["cards-announce"],
+          "defaultContent": []
+        },
+        {
+          "id": "s5",
+          "name": "products-solutions",
+          "selector": "section[data-section='products-solutions']",
+          "style": "dark",
+          "blocks": ["cards-product"],
+          "defaultContent": [
+            "section[data-section='products-solutions'] > p.eyebrow",
+            "section[data-section='products-solutions'] > h2",
+            "section[data-section='products-solutions'] > p"
+          ]
+        },
+        {
+          "id": "s7",
+          "name": "about-stats",
+          "selector": "section[data-section='about-stats']",
+          "style": "accent",
+          "blocks": ["columns-stats"],
+          "defaultContent": [
+            "section[data-section='about-stats'] > picture",
+            "section[data-section='about-stats'] > p.eyebrow",
+            "section[data-section='about-stats'] > h2",
+            "section[data-section='about-stats'] > p"
+          ]
+        },
+        {
+          "id": "s8",
+          "name": "community-impact",
+          "selector": "section[data-section='community-impact']",
+          "style": "green",
+          "blocks": ["cards-editorial", "hero-promo"],
+          "defaultContent": [
+            "section[data-section='community-impact'] > p.eyebrow",
+            "section[data-section='community-impact'] > h2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "product-page",
+      "urls": [
+        "https://www.newyorklife.com/products/insurance"
+      ],
+      "representativeUrl": "https://www.newyorklife.com/products/insurance",
+      "coverageGaps": [],
+      "description": "Product/solution landing page: dark-blue hero, intro text, feature cards (icon + heading + text), product card grid linking to sub-products, FAQ accordion, related article cards, why-NYL value props, teaser CTA, and email-subscribe module.",
+      "blocks": [
+        {
+          "name": "hero-dark",
+          "instances": ["section[data-block='hero']"]
+        },
+        {
+          "name": "cards-feature",
+          "instances": ["section[data-block='container-feature']"]
+        },
+        {
+          "name": "cards-product",
+          "instances": ["section[data-block='container-product']"]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": ["section[data-block='accordion']"]
+        },
+        {
+          "name": "cards-editorial",
+          "instances": ["section[data-block='container-editorial']"]
+        },
+        {
+          "name": "columns-stats",
+          "instances": ["section[data-block='container-columns']"]
+        },
+        {
+          "name": "hero-promo",
+          "instances": ["section[data-block='teaser']"]
+        },
+        {
+          "name": "email-subscribe",
+          "instances": ["section[data-block='email-subscribe']"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "name": "hero",
+          "selector": "section[data-block='hero']",
+          "style": "dark",
+          "blocks": ["hero-dark"],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "article-page",
+      "urls": [
+        "https://www.newyorklife.com/articles/types-of-life-insurance-policies"
+      ],
+      "representativeUrl": "https://www.newyorklife.com/articles/types-of-life-insurance-policies",
+      "coverageGaps": [],
+      "description": "Editorial article page: breadcrumb, title, share bar, intro, quick-links jump nav, hero image, long-form rich text body with headings/lists, comparison table, related-content article cards, and a lead-generation contact form CTA.",
+      "blocks": [
+        {
+          "name": "table",
+          "instances": ["div[data-section='article-body'] table"]
+        },
+        {
+          "name": "cards-editorial",
+          "instances": ["div[data-section='related-content'] .article-cards"]
+        },
+        {
+          "name": "hero-promo",
+          "instances": ["div[data-section='teaser']"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "s5",
+          "name": "teaser",
+          "selector": "div[data-section='teaser']",
+          "style": "dark",
+          "blocks": ["hero-promo"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

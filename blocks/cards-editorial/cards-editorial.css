@@ -1,0 +1,76 @@
+.cards-editorial > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 600px) {
+  .cards-editorial > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-editorial > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards-editorial > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.cards-editorial > ul > li:hover {
+  box-shadow: 0 4px 16px rgb(0 10 98 / 12%);
+}
+
+.cards-editorial .cards-editorial-card-image {
+  line-height: 0;
+}
+
+.cards-editorial .cards-editorial-card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.cards-editorial .cards-editorial-card-body {
+  margin: 16px 20px 20px;
+}
+
+/* uppercase eyebrow label (Article / Foundation / Philanthropy …) */
+.cards-editorial .cards-editorial-card-body .label {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted-color, #555);
+  margin-bottom: 8px;
+}
+
+.cards-editorial .cards-editorial-card-body p {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.cards-editorial .cards-editorial-card-body a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.cards-editorial > ul > li:hover .cards-editorial-card-body a {
+  color: var(--link-color);
+}

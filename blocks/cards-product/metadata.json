@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "wide",
+    "purpose": "product",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + bold descriptor + description, whole-card link (no image)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product/solution link-card grids on dark backgrounds",
+      "navigation card sets"
+    ],
+    "notSuitableFor": [
+      "image cards",
+      "icon feature cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/products/insurance"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-21T08:07:00.000Z"
+  }
+}

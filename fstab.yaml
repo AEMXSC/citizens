@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main"
+    type: "markup"
+    suffix: ".html"

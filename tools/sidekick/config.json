@@ -1,0 +1,6 @@
+{
+  "project": "New York Life",
+  "editUrlLabel": "AEM Editor",
+  "host": "www.newyorklife.com",
+  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+}

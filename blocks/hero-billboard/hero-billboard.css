@@ -1,0 +1,110 @@
+.hero-billboard-container .hero-billboard-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-billboard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+/* first child div holds the full-bleed background picture */
+.hero-billboard > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+}
+
+.hero-billboard > div:first-child picture,
+.hero-billboard > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+/* second child div = opaque white content card on the left */
+.hero-billboard > div:not(:first-child) {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 560px;
+  margin-right: auto;
+  padding: 40px;
+  background-color: #fff;
+}
+
+/* signature NYL angled cut on the card's bottom-right corner */
+@media (width >= 900px) {
+  .hero-billboard > div:not(:first-child) {
+    padding: 56px 64px 72px 56px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 56px), calc(100% - 90px) 100%, 0 100%);
+  }
+}
+
+.hero-billboard h1 {
+  margin: 0 0 20px;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1.08;
+}
+
+.hero-billboard h1 .eyebrow,
+.hero-billboard h1 span:first-child {
+  display: block;
+  margin-bottom: 20px;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted-color, #474952);
+}
+
+.hero-billboard p {
+  margin: 0 0 24px;
+  max-width: 460px;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* solid blue primary CTA */
+.hero-billboard a:any-link {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+  background-color: var(--link-color, #0468ff);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.hero-billboard a:hover {
+  background-color: var(--link-hover-color, #001e94);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .hero-billboard {
+    padding: 0 32px;
+    min-height: 560px;
+  }
+
+  .hero-billboard h1 {
+    font-size: 56px;
+  }
+}

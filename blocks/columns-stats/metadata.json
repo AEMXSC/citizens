@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "wide",
+    "purpose": "stats",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "grid of heading + paragraph value-prop items with footnote superscripts",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": ["value proposition / stats grids", "side-by-side informational text blocks with rich text"],
+    "notSuitableFor": ["clickable card grids", "image galleries"]
+  },
+  "usage": {
+    "pagesUsing": ["/index", "/products/insurance"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-21T08:07:00.000Z"
+  }
+}

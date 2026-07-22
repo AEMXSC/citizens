@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "http://localhost:8899/articles/types-of-life-insurance-policies.html",
+  "path": "articles/types-of-life-insurance-policies",
+  "timestamp": "2026-07-21T17:57:39.808Z",
+  "title": "Types of Life Insurance Policies | New York Life",
+  "template": "article-page",
+  "blocks": [
+    "table",
+    "cards-editorial",
+    "hero-promo"
+  ]
+}

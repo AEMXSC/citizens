@@ -1,0 +1,32 @@
+.columns-stats > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 40px;
+}
+
+.columns-stats img {
+  width: 100%;
+}
+
+.columns-stats > div > div h4 {
+  margin: 0 0 8px;
+}
+
+.columns-stats > div > div p {
+  margin: 0;
+}
+
+.columns-stats sup {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
+.columns-stats > div > .columns-stats-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-stats > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

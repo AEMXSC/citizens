@@ -1,0 +1,65 @@
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards-feature > ul > li {
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.cards-feature .cards-feature-card-body {
+  margin: 16px;
+}
+
+.cards-feature .cards-feature-card-body h3 {
+  margin-bottom: 8px;
+}
+
+.cards-feature .cards-feature-card-image {
+  line-height: 0;
+}
+
+.cards-feature .cards-feature-card-image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* ---- Two-column, left-aligned variant (product-page "Protect your…" grid) ---- */
+@media (width >= 900px) {
+  .cards-feature.two-col > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 64px;
+  }
+}
+
+.cards-feature.two-col > ul > li {
+  text-align: left;
+  background-color: transparent;
+}
+
+.cards-feature.two-col .cards-feature-card-body {
+  margin: 12px 0 0;
+}
+
+.cards-feature.two-col .cards-feature-card-image {
+  text-align: left;
+}
+
+.cards-feature.two-col .cards-feature-card-image img {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+}

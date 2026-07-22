@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "http://localhost:8899/products/insurance.html",
+  "path": "products/insurance",
+  "timestamp": "2026-07-21T17:02:40.124Z",
+  "title": "Insurance Policies | New York Life",
+  "template": "product-page",
+  "blocks": [
+    "hero-dark",
+    "cards-feature",
+    "cards-product",
+    "accordion-faq",
+    "cards-editorial",
+    "columns-stats",
+    "hero-promo",
+    "email-subscribe"
+  ]
+}

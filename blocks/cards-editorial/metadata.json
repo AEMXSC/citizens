@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-editorial",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T07:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "article",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + label + title, whole-card link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "article/resource cards",
+      "community program cards",
+      "image + label + title link grids"
+    ],
+    "notSuitableFor": [
+      "icon-only cards",
+      "no-image link cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/index",
+      "/products/insurance",
+      "/articles/types-of-life-insurance-policies"
+    ],
+    "reuseCount": 4,
+    "lastUsed": "2026-07-21T08:22:00.000Z"
+  }
+}

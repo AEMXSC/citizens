@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-dark",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-21T08:05:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.newyorklife.com/products/insurance",
+    "originPage": "product-page (insurance)",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "eyebrow + heading + paragraph + CTA, side-by-side photographic image on dark-blue background",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "dark-blue primary page heroes with side image",
+      "product/category landing page top banners with eyebrow label",
+      "branded dark hero with single CTA"
+    ],
+    "notSuitableFor": [
+      "light photographic overlay heroes (use hero-billboard)",
+      "compact mid-page promo strips (use hero-promo)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/products/insurance"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T08:05:00.000Z"
+  }
+}

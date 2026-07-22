@@ -1,0 +1,41 @@
+.cards-calc > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (width >= 900px) {
+  .cards-calc > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cards-calc > ul > li {
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  background-color: var(--background-color);
+}
+
+.cards-calc .cards-calc-card-image {
+  line-height: 0;
+  margin: 16px 16px 0;
+}
+
+.cards-calc .cards-calc-card-image img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cards-calc .cards-calc-card-body {
+  margin: 12px 16px 16px;
+  font-weight: 600;
+}
+
+.cards-calc .cards-calc-card-body a {
+  text-decoration: none;
+  color: inherit;
+}
