@@ -24,3 +24,5 @@ export default function decorate(block) {
     row.replaceWith(details);
   });
 }
+
+// code-sync 20260722

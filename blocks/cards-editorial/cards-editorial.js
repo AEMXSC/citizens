@@ -42,3 +42,5 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 }
+
+// code-sync 20260722

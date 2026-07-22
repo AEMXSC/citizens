@@ -12,3 +12,5 @@ export default function decorate(block) {
     row.classList.add(row.querySelector('picture') ? 'hero-commercial-media' : 'hero-commercial-content');
   });
 }
+
+// code-sync 20260722

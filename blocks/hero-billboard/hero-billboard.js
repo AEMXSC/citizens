@@ -34,3 +34,5 @@ export default function decorate(block) {
   span.textContent = eyebrowText;
   h1.append(span, document.createTextNode(headingText));
 }
+
+// code-sync 20260722

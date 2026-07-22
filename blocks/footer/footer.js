@@ -18,3 +18,5 @@ export default async function decorate(block) {
 
   block.append(footer);
 }
+
+// code-sync 20260722

@@ -21,3 +21,5 @@ export default function decorate(block) {
   });
   block.replaceChildren(ul);
 }
+
+// code-sync 20260722

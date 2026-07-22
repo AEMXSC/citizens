@@ -422,3 +422,5 @@ main .section.dark .cards-editorial > ul > li:hover .cards-editorial-card-body a
 main .section.green .cards-editorial > ul > li:hover .cards-editorial-card-body a {
   color: var(--link-color);
 }
+
+/* code-sync 20260722 */

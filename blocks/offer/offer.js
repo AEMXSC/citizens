@@ -53,3 +53,5 @@ export default async function decorate(block) {
     </div>
   </div>`;
 }
+
+// code-sync 20260722

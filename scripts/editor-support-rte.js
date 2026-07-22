@@ -65,3 +65,5 @@ export function decorateRichtext(container = document) {
     }
   }
 }
+
+// code-sync 20260722

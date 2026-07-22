@@ -169,3 +169,5 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
+// code-sync 20260722

@@ -36,3 +36,5 @@ export default async function decorate(block) {
   block.innerHTML = '';
   block.append(table);
 }
+
+// code-sync 20260722
