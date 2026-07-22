@@ -15,6 +15,24 @@ code repo alone.
 - Preview host (once wired): `https://main--citizens--aemxsc.aem.page/`
 - Shared Content Fragments: the XSC Showcase set under the `securbank` persisted-query namespace (`ArticleList`, `OfferList`/`OfferByPath`) — the same fragments `citizens-next` and the `content-fragment`/`offer` blocks consume.
 
+## Phase A — DA testing NOW (no AEM author site needed)
+
+`fstab.yaml` currently mounts DA, so the site is testable this week without any
+AEM admin work:
+
+1. Create/confirm the DA space `AEMXSC/citizens` at https://da.live.
+2. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to `AEMXSC/citizens` (also needed for Phase B).
+3. Upload the homepage: the ready content doc is at `.snowflake/projects/001-homepage/output/index.html`. Load it as `AEMXSC/citizens/index` in da.live (paste into the da.live editor, or PUT to `https://admin.da.live/source/AEMXSC/citizens/index.html`). Add hero + card images in the DA editor.
+4. Preview: `https://admin.hlx.page/preview/AEMXSC/citizens/main/` then view at `https://main--citizens--aemxsc.aem.page/`.
+
+The four new blocks render from DA-authored block tables exactly as they will in
+UE, so this is a true test of the design.
+
+## Phase B — switch to UE/AEM crosswalk + content package (later)
+
+Flip `fstab.yaml` back to the AEM author mount (the exact URL is preserved in the
+comment at the top of that file), then:
+
 ## Step 1 — Provision the AEM author `citizens` site
 
 Create the site under the shared author, the same way the `nyl` site was
