@@ -352,6 +352,44 @@
     ]
   },
   {
+    "id": "fdic-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "FDIC Logo",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Disclosure Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "feature-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Icon / Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text (heading, description, and card link)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -383,6 +421,32 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-commercial",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text (heading, message, and CTA link)",
         "valueType": "string"
       }
     ]
@@ -466,31 +530,20 @@
     ]
   },
   {
-    "id": "content-fragment",
+    "id": "section-title",
     "fields": [
       {
-        "component": "text",
-        "name": "heading",
-        "label": "Heading (optional)",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "offer",
-    "fields": [
-      {
-        "component": "aem-content-fragment",
-        "name": "offerpath",
+        "component": "richtext",
+        "name": "title",
         "value": "",
-        "label": "Offer Content Fragment path",
+        "label": "Heading",
         "valueType": "string"
       },
       {
-        "component": "text-input",
-        "name": "variation",
+        "component": "richtext",
+        "name": "text",
         "value": "",
-        "label": "Variation",
+        "label": "Intro Text",
         "valueType": "string"
       }
     ]

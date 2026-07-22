@@ -13,11 +13,13 @@
       "button",
       "title",
       "hero",
+      "hero-commercial",
+      "feature-grid",
+      "fdic-banner",
+      "section-title",
       "cards",
       "columns",
-      "fragment",
-      "content-fragment",
-      "offer"
+      "fragment"
     ]
   },
   {
@@ -90,6 +92,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "feature-grid",
+    "components": [
+      "feature-card"
     ]
   }
 ]
