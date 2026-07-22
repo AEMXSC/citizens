@@ -1,0 +1,71 @@
+{
+  "source": "https://www.citizensbank.com/homepage.aspx",
+  "capturedBytes": 124248,
+  "conversionLevel": "block",
+  "authoringModel": "crosswalk-aem-author",
+  "note": "Crosswalk/UE project (reskinned from nyl). Snowflake substrate (page-level overlay) intentionally NOT installed: it would replace the Citizens-reskinned styles.css/fonts.css/head.html/header/footer with empty overlay stubs. Block CODE lives in the repo; page CONTENT is authored in the AEM author citizens site (pending) and imported like nyl.",
+  "brand": {
+    "primary": "#008555",
+    "primaryDark": "#004f33",
+    "secondary": "#044da2",
+    "ink": "#231f20",
+    "heroBackground": "sage (cbds-u-backgroundColor--sage)",
+    "bodyFont": "Fira Sans",
+    "displayFont": "Addington"
+  },
+  "sections": [
+    {
+      "order": 1,
+      "citizensComponent": "cbds-c-fdic",
+      "role": "FDIC compliance banner (logo + disclosure text)",
+      "edsBlock": "new: fdic-banner (small) OR default content",
+      "content": "FDIC-Insured - Backed by the full faith and credit of the U.S. Government"
+    },
+    {
+      "order": 2,
+      "citizensComponent": "dcom-c-hero-commercial (sage background)",
+      "role": "Primary hero: heading + CTA + image",
+      "edsBlock": "hero (existing) with sage-background variant",
+      "content": { "heading": "Welcome to simplified checking and payments.", "cta": "Get Started" }
+    },
+    {
+      "order": 3,
+      "citizensComponent": "dcom-c-featureGrid--card--image",
+      "role": "Product feature cards (image cards with card links)",
+      "edsBlock": "cards-product or cards-feature (existing)",
+      "cards": [
+        { "heading": "A card for where you are and where you're going", "link": "Explore credit cards" },
+        { "heading": "Pay for college with Multi-Year Approval", "link": "Learn about multi-year approval" },
+        { "heading": "Money in as little as two weeks", "link": "Use your home equity" },
+        { "heading": "Turn your spare change into savings with Round Ups", "link": "Start Saving" }
+      ]
+    },
+    {
+      "order": 4,
+      "citizensComponent": "dcom-c-section-title-global",
+      "role": "Section heading",
+      "edsBlock": "default content (h2)",
+      "content": "Customer service at your fingertips"
+    },
+    {
+      "order": 5,
+      "citizensComponent": "dcom-c-featureGrid--card--icon",
+      "role": "Service icon cards",
+      "edsBlock": "cards or cards-announce (existing, icon variant)",
+      "cards": [
+        { "heading": "Mobile and Online Banking", "link": "Login to online banking" },
+        { "heading": "Contact Us", "link": "Customer Service" },
+        { "heading": "Find a Branch or ATM", "link": "Find a branch near you" },
+        { "heading": "Meet with a banker", "link": "Schedule an appointment" }
+      ]
+    },
+    {
+      "order": 6,
+      "citizensComponent": "dcom-c-footer-global",
+      "role": "Footer",
+      "edsBlock": "footer (existing fragment)"
+    }
+  ],
+  "ueCompatibility": "Reuse existing nyl-derived blocks; their UE models already exist (models/*.json + component-definition/models/filters at root). Any new block (fdic-banner) needs a matching _fdic-banner.json model + definition/filter entries per ise-boilerplate ue/ pattern.",
+  "assetStrategy": "absolute (hotlink Citizens Scene7/asset images for the demo), consistent with the font approach"
+}
