@@ -1,17 +1,16 @@
 /* stylelint-disable max-line-length */
 
-/* Citizens Bank brand design system — extracted from citizensbank.com.
-   Type is Fira Sans throughout (headings are Fira Sans BOLD, not a serif —
-   matching the real site). Brand green #008555 for logo/accents; orange
-   #d93d00 for CTAs; blue #044da2 for inline links. Fonts hotlinked from
-   Citizens' asset host for the demo (verified 200). */
+/* Citizens Bank brand design system. Fira Sans is SELF-HOSTED (Citizens'
+   asset host blocks cross-origin @font-face via CORS, so hotlinking fails in
+   the browser). Headings use Fira Sans bold — matching the real site, which
+   uses no serif for display type. Brand green #008555; orange #d93d00 CTAs. */
 
 @font-face {
   font-family: "fira sans";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Light.woff") format("woff");
+  src: url("../fonts/FiraSans-Light.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Regular.woff") format("woff");
+  src: url("../fonts/FiraSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +26,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Medium.woff") format("woff");
+  src: url("../fonts/FiraSans-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -35,7 +34,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-SemiBold.woff") format("woff");
+  src: url("../fonts/FiraSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -43,7 +42,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Bold.woff") format("woff");
+  src: url("../fonts/FiraSans-Bold.woff") format("woff");
 }
 
 :root {
@@ -55,16 +54,16 @@
   --background-color: #fff;
   --text-color: #231f20;
   --text-muted-color: #636262;
-  --link-color: #044da2;        /* Citizens blue for inline text links */
+  --link-color: #044da2;
   --link-hover-color: #003a7a;
 
   /* brand palette */
   --brand-green: #008555;
   --brand-green-dark: #004f33;
-  --cta-color: #d93d00;         /* Citizens orange CTA */
+  --cta-color: #d93d00;
   --cta-hover: #ad3000;
   --cta-active: #561800;
-  --hero-bg: #f2f1ec;           /* warm light neutral hero panel */
+  --hero-bg: #f2f1ec;
 
   /* legacy aliases kept so existing block CSS keeps resolving */
   --brand-navy: #004f33;

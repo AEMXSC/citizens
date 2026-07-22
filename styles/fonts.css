@@ -1,17 +1,15 @@
 /* stylelint-disable max-line-length */
 
-/* Citizens Bank brand fonts. Fira Sans (body) + Addington (display serif),
-   extracted from citizensbank.com and hotlinked from Citizens' asset host for
-   the demo (verified HTTP 200). Durable path: self-host the woff/woff2 or serve
-   via a licensed kit; swap these URLs then. Only faces confirmed to resolve are
-   referenced (Addington ships DemiBold woff2; Fira Sans ships woff). */
+/* Citizens Bank fonts — Fira Sans, SELF-HOSTED from /fonts/. Hotlinking from
+   citizensbank.com fails in the browser (no CORS header on the font files), so
+   the woff files are committed to this repo and served same-origin. */
 
 @font-face {
   font-family: "fira sans";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Light.woff') format('woff');
+  src: url("../fonts/FiraSans-Light.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +17,15 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-Regular.woff') format('woff');
+  src: url("../fonts/FiraSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "fira sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/FiraSans-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -27,15 +33,13 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('https://www.citizensbank.com/assets/CB_resources/fonts/fira-sans/FiraSans-SemiBold.woff') format('woff');
+  src: url("../fonts/FiraSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: addington;
+  font-family: "fira sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://www.citizensbank.com/assets/CB_resources/fonts/addington/AddingtonCF-DemiBold.woff2') format('woff2');
+  src: url("../fonts/FiraSans-Bold.woff") format("woff");
 }
-
-/* code-sync 20260722 */

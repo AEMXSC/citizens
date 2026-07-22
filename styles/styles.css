@@ -21,9 +21,9 @@
   --link-color: #008555;
   --link-hover-color: #004f33;
 
-  /* fonts: Fira Sans body, Addington display serif */
-  --body-font-family: "fira sans", arial, helvetica, sans-serif;
-  --heading-font-family: addington, georgia, "Times New Roman", serif;
+  /* fonts: Fira Sans throughout; headings are bold (no serif) */
+  --body-font-family: "fira sans", arial, "Helvetica Neue", helvetica, sans-serif;
+  --heading-font-family: "fira sans", arial, "Helvetica Neue", helvetica, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 18px;
