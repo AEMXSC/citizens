@@ -12,7 +12,10 @@ export default async function decorate(block) {
 
   const pathCell = block.querySelector(':scope div:nth-child(1) > div');
   const pathLink = pathCell ? pathCell.querySelector('a') : null;
-  const offerpath = (pathLink ? pathLink.textContent : (pathCell ? pathCell.textContent : '')).trim();
+  let offerpathRaw = '';
+  if (pathLink) offerpathRaw = pathLink.textContent;
+  else if (pathCell) offerpathRaw = pathCell.textContent;
+  const offerpath = offerpathRaw.trim();
   const variationEl = block.querySelector(':scope div:nth-child(2) > div');
   const variationname = (variationEl && variationEl.textContent.trim()) || 'main';
 

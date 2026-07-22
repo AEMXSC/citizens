@@ -9,6 +9,8 @@ const CF_ENDPOINT = 'https://nyl-app.compass-xsc.workers.dev/graphql/execute.jso
 
 function imgUrl(hero) {
   if (!hero) return '';
+  // AEM GraphQL delivery fields — names are fixed by AEM, cannot be renamed.
+  /* eslint-disable-next-line no-underscore-dangle */
   return hero._dmS7Url || hero._publishUrl || hero._dynamicUrl || '';
 }
 
