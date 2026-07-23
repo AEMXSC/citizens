@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/root/v1/root">
+  <section_0
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <text
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/text/v1/text"
+    text="&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Citizens&lt;/a&gt;&lt;/p&gt;"/>
+  </section_0>
+  <section_1
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <text
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/text/v1/text"
+    text="&lt;ul&gt;&lt;li&gt;Bank&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/checking&quot;&gt;Checking&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/savings&quot;&gt;Savings&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/cds&quot;&gt;CDs &amp;amp; Money Market&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Borrow&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/credit-cards&quot;&gt;Credit Cards&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/home-equity&quot;&gt;Home Equity&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/student-loans&quot;&gt;Student Loans&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/mortgage&quot;&gt;Mortgage&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Invest&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/wealth&quot;&gt;Wealth Management&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/retirement&quot;&gt;Retirement&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/learn&quot;&gt;Learn&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+  </section_1>
+  <section_2
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <text
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/text/v1/text"
+    text="&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/locator&quot;&gt;Locations&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Customer Service&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+  </section_2>
+</jcr:root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/root/v1/root">
+  <section_0
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <text
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/text/v1/text"
+    text="&lt;p&gt;Get in Touch&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Customer Service&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/locator&quot;&gt;Find a Branch or ATM&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/appointment&quot;&gt;Schedule an Appointment&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Products&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/checking&quot;&gt;Checking &amp;amp; Savings&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/credit-cards&quot;&gt;Credit Cards&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/home-equity&quot;&gt;Home Equity&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/wealth&quot;&gt;Wealth Management&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;About&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About Citizens&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/careers&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/newsroom&quot;&gt;Newsroom&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;FDIC-Insured — Backed by the full faith and credit of the U.S. Government&lt;/p&gt;&lt;p&gt;© 2026 Citizens Financial Group, Inc. All rights reserved. Citizens is a brand name of Citizens Bank, N.A. Member FDIC.&lt;/p&gt;"/>
+  </section_0>
+</jcr:root>

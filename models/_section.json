@@ -33,6 +33,18 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Section Grey",
+              "value": "section-grey"
+            },
+            {
+              "name": "Impact Band",
+              "value": "impact-band"
+            },
+            {
+              "name": "Article",
+              "value": "article"
             }
           ]
         }
@@ -52,6 +64,7 @@
         "feature-grid",
         "fdic-banner",
         "section-title",
+        "callout",
         "cards",
         "columns",
         "fragment"

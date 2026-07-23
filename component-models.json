@@ -136,6 +136,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Section Grey",
+            "value": "section-grey"
+          },
+          {
+            "name": "Impact Band",
+            "value": "impact-band"
+          },
+          {
+            "name": "Article",
+            "value": "article"
           }
         ]
       }
@@ -156,6 +168,18 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "callout",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text (heading and list)",
         "valueType": "string"
       }
     ]

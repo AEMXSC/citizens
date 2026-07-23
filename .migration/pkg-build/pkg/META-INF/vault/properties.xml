@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>CitizensFSI content overlay</comment>
+    <entry key="name">citizens-content</entry>
+    <entry key="version">1.1</entry>
+    <entry key="group">aemxsc</entry>
+    <entry key="description">Overlays jcr:content/root for index, nav, footer, about-us/overview, and the student savings article.</entry>
+</properties>

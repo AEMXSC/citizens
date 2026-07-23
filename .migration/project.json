@@ -1,0 +1,12 @@
+{
+  "sites": {
+    "citizens": {
+      "previewOrg": "aemxsc",
+      "previewSite": "citizens",
+      "aemSitePath": "/content/citizensbank",
+      "aemAssetsFolderPath": "/content/dam/citizensbank",
+      "aemSiteName": "citizensbank",
+      "aemSiteTitle": "CitizensFSI"
+    }
+  }
+}

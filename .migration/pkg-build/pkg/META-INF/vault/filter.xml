@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/citizensbank/index/jcr:content/root"/>
+    <filter root="/content/citizensbank/nav/jcr:content/root"/>
+    <filter root="/content/citizensbank/footer/jcr:content/root"/>
+    <filter root="/content/citizensbank/about-us/overview/jcr:content/root"/>
+    <filter root="/content/citizensbank/student/articles/high-school-students-can-start-saving-money-college/jcr:content/root"/>
+</workspaceFilter>

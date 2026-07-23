@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/root/v1/root">
+  <section_0
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <block
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/block/v1/block"
+    name="FDIC Banner"
+    model="fdic-banner"
+    image="/content/dam/citizensbank/fdic-logo.svg"
+    imageAlt="FDIC"
+    text="&lt;p&gt;FDIC-Insured — Backed by the full faith and credit of the U.S. Government&lt;/p&gt;"/>
+    <block_1
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/block/v1/block"
+    name="Hero Commercial"
+    model="hero-commercial"
+    image="/content/dam/citizensbank/hero-app.png"
+    imageAlt="Citizens App Preview"
+    text="&lt;h1&gt;Welcome to simplified checking and payments.&lt;/h1&gt;&lt;p&gt;One account to spend, save, and move your money, with the tools to stay on top of it all.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/checking&quot;&gt;Get Started&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;"/>
+  </section_0>
+  <section_1
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <block
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/block/v1/block"
+    name="Feature Grid"
+    filter="feature-grid"
+    classes="image">
+      <item_0
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/card-credit-cards.jpg"
+        imageAlt="Credit cards"
+        text="&lt;h3&gt;A card for where you are and where you’re going&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/credit-cards&quot;&gt;Explore credit cards&lt;/a&gt;&lt;/p&gt;"/>
+      <item_1
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/card-multi-year-approval.jpg"
+        imageAlt="Multi-Year Approval"
+        text="&lt;h3&gt;Pay for college with Multi-Year Approval&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/student-loans&quot;&gt;Learn about multi-year approval&lt;/a&gt;&lt;/p&gt;"/>
+      <item_2
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/card-home-equity.jpg"
+        imageAlt="Home equity"
+        text="&lt;h3&gt;Money in as little as two weeks&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/home-equity&quot;&gt;Use your home equity&lt;/a&gt;&lt;/p&gt;"/>
+      <item_3
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/card-round-ups.jpg"
+        imageAlt="Round Ups savings"
+        text="&lt;h3&gt;Turn your spare change into savings with Round Ups&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/savings&quot;&gt;Start Saving&lt;/a&gt;&lt;/p&gt;"/>
+  </block>
+  </section_1>
+  <section_2
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/section/v1/section">
+    <block
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/block/v1/block"
+    name="Section Title"
+    model="section-title"
+    title="&lt;p&gt;Customer service at your fingertips&lt;/p&gt;"
+    text="&lt;p&gt;Bank on your terms, online, on the app, or with a banker.&lt;/p&gt;"/>
+    <block_1
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="core/franklin/components/block/v1/block"
+    name="Feature Grid"
+    filter="feature-grid"
+    classes="icon">
+      <item_0
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/icon-mobile.svg"
+        imageAlt="Mobile and online banking"
+        text="&lt;h3&gt;Mobile and Online Banking&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/login&quot;&gt;Login to online banking&lt;/a&gt;&lt;/p&gt;"/>
+      <item_1
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/icon-contact.svg"
+        imageAlt="Contact us"
+        text="&lt;h3&gt;Contact Us&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/contact&quot;&gt;Customer Service&lt;/a&gt;&lt;/p&gt;"/>
+      <item_2
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/icon-branch.svg"
+        imageAlt="Find a branch"
+        text="&lt;h3&gt;Find a Branch or ATM&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/locator&quot;&gt;Find a branch near you&lt;/a&gt;&lt;/p&gt;"/>
+      <item_3
+      jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block/item"
+        name="Feature Card"
+        model="feature-card"
+        image="/content/dam/citizensbank/icon-banker.svg"
+        imageAlt="Meet with a banker"
+        text="&lt;h3&gt;Meet with a banker&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;/appointment&quot;&gt;Schedule an appointment&lt;/a&gt;&lt;/p&gt;"/>
+  </block_1>
+  </section_2>
+</jcr:root>
