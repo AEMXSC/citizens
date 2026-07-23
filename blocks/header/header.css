@@ -1,6 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 
-/* Citizens two-tier header. */
+/* Citizens three-row header (utility strip, main row, product nav). */
 header .nav-wrapper {
   background: #fff;
   border-bottom: 1px solid var(--brand-border, #e9e9e9);
@@ -28,15 +28,37 @@ header nav a:hover {
   color: var(--brand-green, #008555);
 }
 
-/* ---- Tier 1: brand + audience + tools ---- */
+/* ---- Row 1: utility strip ---- */
+header .nav-utility-row {
+  border-bottom: 1px solid var(--brand-border, #e9e9e9);
+}
+
+header .nav-utility {
+  display: flex;
+  justify-content: flex-end;
+  padding: 9px 0;
+}
+
+header .nav-utility ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header .nav-utility a:any-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-green, #008555);
+}
+
+/* ---- Row 2: main (logo + audience + search + login) ---- */
 header .nav-top {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 18px 0 14px;
+  padding: 16px 0;
 }
 
-/* Brand = Citizens logo (flower + wordmark), self-hosted SVG. */
 header .nav-brand a:any-link {
   display: block;
   width: 168px;
@@ -61,12 +83,10 @@ header .nav-audience a:any-link {
   padding-bottom: 4px;
 }
 
-/* Active audience item (Personal) gets the green underline. */
 header .nav-audience li:first-child a:any-link {
   border-bottom: 3px solid var(--brand-green, #008555);
 }
 
-/* Search box (visual match to citizensbank.com) */
 header .nav-search {
   margin-left: auto;
   display: flex;
@@ -75,7 +95,7 @@ header .nav-search {
   border: 1px solid var(--brand-border, #d3d2d2);
   border-radius: 4px;
   padding: 9px 14px;
-  min-width: 260px;
+  min-width: 240px;
 }
 
 header .nav-search-icon {
@@ -94,30 +114,19 @@ header .nav-search input {
   background: transparent;
 }
 
-header .nav-tools ul {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-header .nav-tools a:any-link {
-  font-size: 14px;
-  color: var(--brand-green, #008555);
-  font-weight: 600;
-}
-
 header a.nav-login {
   background: var(--cta-color, #d93d00);
   color: #fff !important;
   border-radius: 4px;
   padding: 10px 24px;
+  font-weight: 600;
 }
 
 header a.nav-login:hover {
   background: var(--cta-hover, #ad3000);
 }
 
-/* ---- Tier 2: product nav ---- */
+/* ---- Row 3: product nav ---- */
 header .nav-bottom {
   border-top: 1px solid var(--brand-border, #e9e9e9);
 }
@@ -147,7 +156,6 @@ header .nav-products .nav-drop::after {
   font-size: 11px;
 }
 
-/* dropdown panel */
 header .nav-products .nav-drop > ul {
   display: none;
   position: absolute;
@@ -222,6 +230,10 @@ header .nav-hamburger {
     top: 7px;
   }
 
+  header .nav-utility-row {
+    display: none;
+  }
+
   header .nav-top {
     flex-direction: column;
     align-items: flex-start;
@@ -234,18 +246,15 @@ header .nav-hamburger {
     display: none;
   }
 
+  header .nav-search {
+    margin-left: 0;
+    width: 100%;
+  }
+
   header .nav-audience ul,
   header .nav-products > .default-content-wrapper > ul {
     flex-direction: column;
     gap: 6px;
     align-items: flex-start;
-  }
-
-  header .nav-tools {
-    margin-left: 0;
-  }
-
-  header .nav-tools ul {
-    flex-wrap: wrap;
   }
 }

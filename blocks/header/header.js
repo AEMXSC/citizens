@@ -1,10 +1,13 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-// Citizens two-tier header. The /nav fragment provides four sections in order:
-//   1 brand  2 audience  3 products (with dropdowns)  4 tools
-// We render a top row (brand + audience + tools) and a product row beneath,
-// matching citizensbank.com. Degrades gracefully if sections are missing.
+// Citizens three-row header, matching citizensbank.com. The /nav fragment
+// provides four sections in order: 1 brand  2 audience  3 products (dropdowns)
+// 4 tools (Espanol, Find a Branch/ATM, Customer Service, Log in).
+//   Row 1 (utility, thin, right): the tools links except Log in
+//   Row 2 (main): logo + audience + search + Log in button
+//   Row 3 (products): product nav with dropdowns
+// Degrades gracefully if sections are missing.
 
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -18,21 +21,26 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const sections = [...nav.children];
-  const [brand, audience, products, tools] = sections;
+  const [brand, audience, products, tools] = [...nav.children];
   if (brand) brand.classList.add('nav-brand');
   if (audience) audience.classList.add('nav-audience');
   if (products) products.classList.add('nav-products');
-  if (tools) tools.classList.add('nav-tools');
 
-  // Last tools link (Log in) becomes the orange button.
+  // Split tools: last link is Log in (goes in the main row as a button);
+  // the rest stay as the thin utility strip.
+  let loginLink = null;
   if (tools) {
-    const links = tools.querySelectorAll('a');
-    const last = links[links.length - 1];
-    if (last) last.classList.add('nav-login');
+    tools.classList.add('nav-utility');
+    const items = [...tools.querySelectorAll(':scope ul > li')];
+    const lastLi = items[items.length - 1];
+    loginLink = lastLi ? lastLi.querySelector('a') : null;
+    if (loginLink) {
+      loginLink.classList.add('nav-login');
+      lastLi.remove();
+    }
   }
 
-  // Product items with a nested list are dropdowns.
+  // Product dropdowns.
   if (products) {
     products.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li) => {
       if (li.querySelector('ul')) {
@@ -49,12 +57,17 @@ export default async function decorate(block) {
     });
   }
 
+  // Row 1: utility strip.
+  const utilityRow = document.createElement('div');
+  utilityRow.className = 'nav-utility-row';
+  if (tools) utilityRow.append(tools);
+
+  // Row 2: main row (logo + audience + search + login).
   const top = document.createElement('div');
   top.className = 'nav-top';
   if (brand) top.append(brand);
   if (audience) top.append(audience);
 
-  // Search box (visual match to citizensbank.com; submits to a search route).
   const search = document.createElement('form');
   search.className = 'nav-search';
   search.setAttribute('role', 'search');
@@ -62,9 +75,9 @@ export default async function decorate(block) {
   search.innerHTML = '<span class="nav-search-icon" aria-hidden="true"></span>'
     + '<input type="search" name="q" placeholder="How can we help you?" aria-label="Search Citizens">';
   top.append(search);
+  if (loginLink) top.append(loginLink);
 
-  if (tools) top.append(tools);
-
+  // Row 3: product nav.
   const bottom = document.createElement('div');
   bottom.className = 'nav-bottom';
   if (products) bottom.append(products);
@@ -81,9 +94,8 @@ export default async function decorate(block) {
 
   nav.textContent = '';
   nav.setAttribute('aria-expanded', 'false');
-  nav.append(hamburger, top, bottom);
+  nav.append(hamburger, utilityRow, top, bottom);
 
-  // Close open dropdowns when leaving the header.
   nav.addEventListener('mouseleave', () => {
     if (isDesktop.matches) {
       nav.querySelectorAll('.nav-drop[aria-expanded="true"]').forEach((d) => d.setAttribute('aria-expanded', 'false'));
