@@ -78,4 +78,4 @@ export default async function decorate(block) {
   block.innerHTML = `<div class="sc-offer-grid">${cards}</div>`;
 }
 
-// code-sync 20260723b
+// code-sync 20260723c
