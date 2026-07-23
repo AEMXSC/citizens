@@ -172,6 +172,49 @@ main > div.impact-band h2 {
   margin-top: 0;
 }
 
+/* article layout (section metadata Style: article) — readable column */
+main > div.article {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > div.article p,
+main > div.article li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+main > div.article h2 {
+  font-size: 28px;
+  margin-top: 1.5em;
+}
+
+main > div.article h3 {
+  font-size: 20px;
+  margin-top: 1.3em;
+  margin-bottom: 0.25em;
+}
+
+main > div.article ul {
+  padding-left: 1.25em;
+}
+
+main > div.article li {
+  margin: 8px 0;
+}
+
+main > div.article picture img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+main > div.article .breadcrumb {
+  font-size: 14px;
+  color: var(--text-muted-color, #636262);
+  margin-bottom: 4px;
+}
+
 input,
 textarea,
 select,

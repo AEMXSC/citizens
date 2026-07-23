@@ -1,0 +1,28 @@
+/* Citizens article callout (key-takeaways / highlight box). */
+.callout {
+  background: #eef6f1;
+  border: 1px solid #d7e8df;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+
+.callout h2,
+.callout h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.callout ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.callout li {
+  margin: 8px 0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* code-sync 20260723 */
