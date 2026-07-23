@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /* Citizens two-tier header. */
 header .nav-wrapper {
   background: #fff;
