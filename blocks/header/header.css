@@ -30,18 +30,18 @@ header nav a:hover {
 header .nav-top {
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding: 14px 0;
+  gap: 32px;
+  padding: 18px 0 14px;
 }
 
-header .nav-brand {
-  font-family: var(--heading-font-family);
-  font-weight: 700;
-  font-size: 24px;
-}
-
+/* Brand = Citizens logo (flower + wordmark), self-hosted SVG. */
 header .nav-brand a:any-link {
-  color: var(--brand-green, #008555);
+  display: block;
+  width: 168px;
+  height: 34px;
+  background: url("/images/citizens-logo.svg") left center / contain no-repeat;
+  font-size: 0;
+  color: transparent;
 }
 
 header .nav-brand p {
@@ -50,12 +50,18 @@ header .nav-brand p {
 
 header .nav-audience ul {
   display: flex;
-  gap: 22px;
+  gap: 26px;
 }
 
 header .nav-audience a:any-link {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+/* Active audience item (Personal) gets the green underline. */
+header .nav-audience li:first-child a:any-link {
+  border-bottom: 3px solid var(--brand-green, #008555);
 }
 
 header .nav-tools {
@@ -65,7 +71,7 @@ header .nav-tools {
 header .nav-tools ul {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
 }
 
 header .nav-tools a:any-link {
@@ -75,41 +81,44 @@ header .nav-tools a:any-link {
 }
 
 header a.nav-login {
-  border: 1px solid var(--brand-green, #008555);
-  color: var(--brand-green, #008555) !important;
+  background: var(--cta-color, #d93d00);
+  color: #fff !important;
   border-radius: 4px;
-  padding: 8px 20px;
+  padding: 10px 24px;
 }
 
 header a.nav-login:hover {
-  background: var(--brand-green, #008555);
-  color: #fff !important;
+  background: var(--cta-hover, #ad3000);
 }
 
 /* ---- Tier 2: product nav ---- */
 header .nav-bottom {
   border-top: 1px solid var(--brand-border, #e9e9e9);
-  padding: 6px 0;
 }
 
 header .nav-products > .default-content-wrapper > ul {
   display: flex;
-  gap: 28px;
+  gap: 30px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 header .nav-products > .default-content-wrapper > ul > li {
   position: relative;
-  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 14px 0;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
 }
 
 header .nav-products .nav-drop::after {
-  content: " \25BE";
+  content: "\25BE";
+  margin-left: 6px;
   color: var(--text-muted-color, #636262);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 /* dropdown panel */
@@ -118,13 +127,13 @@ header .nav-products .nav-drop > ul {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 240px;
+  min-width: 250px;
   background: #fff;
   border: 1px solid var(--brand-border, #e9e9e9);
   border-radius: 6px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 12%);
   padding: 10px 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 header .nav-products .nav-drop[aria-expanded="true"] > ul {
@@ -132,12 +141,17 @@ header .nav-products .nav-drop[aria-expanded="true"] > ul {
 }
 
 header .nav-products .nav-drop > ul > li {
-  padding: 8px 20px;
+  padding: 9px 22px;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 header .nav-products .nav-drop > ul a:any-link {
   color: var(--text-color, #231f20);
+}
+
+header .nav-products .nav-drop > ul a:hover {
+  color: var(--brand-green, #008555);
 }
 
 /* ---- Mobile ---- */
@@ -149,13 +163,14 @@ header .nav-hamburger {
   header .nav-hamburger {
     display: block;
     position: absolute;
-    top: 16px;
+    top: 20px;
     right: 20px;
     width: 28px;
     height: 24px;
     border: 0;
     background: transparent;
     cursor: pointer;
+    z-index: 30;
   }
 
   header .nav-hamburger-icon,
@@ -184,7 +199,8 @@ header .nav-hamburger {
   header .nav-top {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 16px;
+    padding-top: 60px;
   }
 
   header nav[aria-expanded="false"] .nav-top,
@@ -195,10 +211,15 @@ header .nav-hamburger {
   header .nav-audience ul,
   header .nav-products > .default-content-wrapper > ul {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    align-items: flex-start;
   }
 
   header .nav-tools {
     margin-left: 0;
+  }
+
+  header .nav-tools ul {
+    flex-wrap: wrap;
   }
 }
