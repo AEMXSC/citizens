@@ -1,5 +1,7 @@
 # UE/AEM crosswalk mount. Content is authored in the AEM author instance under
-# /content/citizens and delivered via franklin.delivery.
+# /content/citizensbank (site "CitizensFSI") and delivered via franklin.delivery.
+# The franklin.delivery endpoint is keyed to the GitHub repo (aemxsc/citizens),
+# which the Edge Delivery cloud config maps to the /content/citizensbank tree.
 mountpoints:
   /:
     url: https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main
