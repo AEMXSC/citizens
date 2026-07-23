@@ -81,4 +81,41 @@
   padding: 22px 24px 26px;
 }
 
-/* code-sync 20260722 */
+/* stats variant: big number + label, no card chrome (dcom stat grids) */
+.feature-grid.stats ul {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature-grid.stats li {
+  border: 0;
+  background: transparent;
+  padding: 12px 16px;
+  text-align: center;
+  cursor: default;
+}
+
+.feature-grid.stats li:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.feature-grid.stats .feature-grid-card-body h3 {
+  font-size: 46px;
+  line-height: 1.05;
+  color: var(--brand-green, #008555);
+  margin: 0 0 8px;
+}
+
+.feature-grid.stats .feature-grid-card-body p {
+  font-size: 16px;
+  color: var(--text-color, #231f20);
+  margin: 0;
+}
+
+/* image variant: caption title sits below the media, no card border */
+.feature-grid.image .feature-grid-card-body h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* code-sync 20260723 */

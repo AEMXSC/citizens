@@ -149,6 +149,29 @@ main > div {
   margin: 40px 16px;
 }
 
+/* full-bleed tinted bands (section metadata Style: section-grey | impact-band) */
+main > div.section-grey,
+main > div.impact-band {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 48px 16px;
+  background: var(--hero-bg, #f2f1ec);
+}
+
+main > div.impact-band {
+  text-align: center;
+}
+
+main > div.impact-band > div {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > div.impact-band h2 {
+  margin-top: 0;
+}
+
 input,
 textarea,
 select,
