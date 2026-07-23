@@ -1,10 +1,7 @@
-# Content Authoring (DA) mount. Matches the working aemxsc DA sites (e.g.
-# xscteamsite): expanded form with type: markup and no trailing slash.
-#
-# LATER (UE/AEM crosswalk, once the AEM author citizens site exists): swap url to
-#   https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main
-# keep type: markup and add suffix: ".html".
+# UE/AEM crosswalk mount. Content is authored in the AEM author instance under
+# /content/citizens and delivered via franklin.delivery.
 mountpoints:
   /:
-    url: https://content.da.live/AEMXSC/citizens
+    url: https://author-p153659-e1614585.adobeaemcloud.com/bin/franklin.delivery/aemxsc/citizens/main
     type: markup
+    suffix: ".html"
