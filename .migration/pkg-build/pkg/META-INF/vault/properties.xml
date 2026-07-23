@@ -3,7 +3,7 @@
 <properties>
     <comment>CitizensFSI content overlay</comment>
     <entry key="name">citizens-content</entry>
-    <entry key="version">1.1</entry>
+    <entry key="version">1.2</entry>
     <entry key="group">aemxsc</entry>
-    <entry key="description">Overlays jcr:content/root for index, nav, footer, about-us/overview, and the student savings article.</entry>
+    <entry key="description">Overlays index/nav/footer content roots and creates about-us/overview and the student savings article as full cq:Page nodes.</entry>
 </properties>

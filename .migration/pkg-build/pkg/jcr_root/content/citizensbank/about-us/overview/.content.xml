@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      jcr:primaryType="cq:PageContent"
+      sling:resourceType="core/franklin/components/page/v1/page"
+      jcr:title="Overview">
+      <root
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+        <section_0
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/section/v1/section">
+        <block
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Hero Commercial"
+        model="hero-commercial"
+        image="/content/dam/citizensbank/about-hero-colleagues.jpg"
+        imageAlt="Citizens colleagues"
+        text="&lt;h1&gt;Made for what’s possible. Ready to make it happen.&lt;/h1&gt;&lt;p&gt;We have the skills, knowledge and passion to help our customers, colleagues and communities reach their potential.&lt;/p&gt;"/>
+      </section_0>
+          <section_1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/section/v1/section"
+        classes="section-grey">
+        <block
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Section Title"
+        model="section-title"
+        title="&lt;p&gt;A culture that embraces curiosity&lt;/p&gt;"
+        text="&lt;p&gt;Helping others reach their potential takes people who can rethink what’s possible. We embrace lifelong learners and offer career paths that can go wherever your skills and interests take you.&lt;/p&gt;"/>
+        <block_1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Feature Grid"
+        filter="feature-grid"
+        classes="stats">
+          <item_0
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;31%&lt;/h3&gt;&lt;p&gt;Of open roles were filled by colleagues&lt;/p&gt;"/>
+          <item_1
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;700+&lt;/h3&gt;&lt;p&gt;Colleagues completed leadership upskilling&lt;/p&gt;"/>
+          <item_2
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;420,000+&lt;/h3&gt;&lt;p&gt;Hours spent on career development training&lt;/p&gt;"/>
+          <item_3
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;Explore career options&lt;/h3&gt;&lt;p&gt;Explore our career opportunities to find the right job for you.&lt;/p&gt;"/>
+      </block_1>
+      </section_1>
+          <section_2
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/section/v1/section">
+        <block
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Section Title"
+        model="section-title"
+        title="&lt;p&gt;Made for the moment&lt;/p&gt;"
+        text="&lt;p&gt;The biggest games. The biggest stages. The biggest stars. Citizens is proud to sponsor some of the most recognizable names in sports and entertainment and elevate the live experiences we’re all so passionate about.&lt;/p&gt;"/>
+        <block_1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Feature Grid"
+        filter="feature-grid"
+        classes="image">
+          <item_0
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            image="/content/dam/citizensbank/about-citizens-bank-park.png"
+            imageAlt="Citizens Bank Park"
+            text="&lt;h3&gt;Citizens Bank Park&lt;/h3&gt;"/>
+          <item_1
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            image="/content/dam/citizensbank/about-citizens-live.jpg"
+            imageAlt="Citizens Live"
+            text="&lt;h3&gt;Citizens Live®&lt;/h3&gt;"/>
+          <item_2
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            image="/content/dam/citizensbank/about-devils-prudential.jpg"
+            imageAlt="Devils and Prudential Center"
+            text="&lt;h3&gt;Devils &amp;amp; Prudential Center&lt;/h3&gt;"/>
+          <item_3
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            image="/content/dam/citizensbank/about-nyrr.jpg"
+            imageAlt="New York Road Runners"
+            text="&lt;h3&gt;New York Road Runners&lt;/h3&gt;"/>
+      </block_1>
+      </section_2>
+          <section_3
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/section/v1/section"
+        classes="impact-band">
+        <text_0
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/text/v1/text"
+        text="&lt;h2&gt;Committed to making an impact&lt;/h2&gt;&lt;p&gt;We’re dedicated to fostering strong communities, driving positive environmental impact and building the workforce of the future.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.citizensbank.com/about-us/sustainability-impact.aspx&quot;&gt;See Our Impact&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;"/>
+      </section_3>
+          <section_4
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/section/v1/section">
+        <block
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Section Title"
+        model="section-title"
+        title="&lt;p&gt;Strong. Steady. Stable. Successful.&lt;/p&gt;"
+        text="&lt;p&gt;Citizens is one of the oldest and largest financial institutions in the nation. We’re proud of our history and 10 years of growth since our IPO, positioning us for a bright future.&lt;/p&gt;"/>
+        <block_1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/block/v1/block"
+        name="Feature Grid"
+        filter="feature-grid"
+        classes="stats">
+          <item_0
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;$220.1 billion&lt;/h3&gt;&lt;p&gt;Total Assets&lt;/p&gt;"/>
+          <item_1
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;$177.6 billion&lt;/h3&gt;&lt;p&gt;Deposits&lt;/p&gt;"/>
+          <item_2
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;1,000&lt;/h3&gt;&lt;p&gt;Branches&lt;/p&gt;"/>
+          <item_3
+          jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/block/v1/block/item"
+            name="Feature Card"
+            model="feature-card"
+            text="&lt;h3&gt;3,100&lt;/h3&gt;&lt;p&gt;ATMs&lt;/p&gt;"/>
+      </block_1>
+        <text_1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/franklin/components/text/v1/text"
+        text="&lt;p&gt;&lt;em&gt;as of June 30th, 2025&lt;/em&gt;&lt;/p&gt;"/>
+      </section_4>
+      </root>
+  </jcr:content>
+</jcr:root>

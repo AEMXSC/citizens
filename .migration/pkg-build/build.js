@@ -97,6 +97,36 @@ function rootXml(sections) {
 `;
 }
 
+// Full cq:Page node. When `sections` is provided, includes the franklin
+// root content; otherwise emits a bare container page (for intermediate
+// path segments like about-us / student / student/articles).
+function pageXml(title, sections) {
+  const indented = sections
+    ? sections.join('\n      ').replace(/\n/g, '\n    ')
+    : null;
+  const rootInner = indented
+    ? `
+      <root
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="core/franklin/components/root/v1/root">
+        ${indented}
+      </root>`
+    : '';
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      jcr:primaryType="cq:PageContent"
+      sling:resourceType="core/franklin/components/page/v1/page"
+      jcr:title="${attrEsc(title)}">${rootInner}
+  </jcr:content>
+</jcr:root>
+`;
+}
+
 // --- INDEX ---------------------------------------------------------------
 sc = 0;
 const indexSections = [
@@ -224,17 +254,36 @@ const articleSections = [
 ];
 
 // --- write jcr_root tree -------------------------------------------------
-function writeRoot(page, sections) {
-  const dir = path.join(OUT, 'jcr_root', 'content', 'citizensbank', page, '_jcr_content', 'root');
+const BASE = ['jcr_root', 'content', 'citizensbank'];
+
+// Existing pages: overlay only jcr:content/root (page + template already exist).
+function writeRootOverlay(page, sections) {
+  const dir = path.join(OUT, ...BASE, page, '_jcr_content', 'root');
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, '.content.xml'), rootXml(sections));
 }
+
+// New pages: emit a full cq:Page node (its .content.xml lives at the page dir).
+function writePage(segments, title, sections) {
+  const dir = path.join(OUT, ...BASE, ...segments);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, '.content.xml'), pageXml(title, sections));
+}
+
 fs.rmSync(OUT, { recursive: true, force: true });
-writeRoot('index', indexSections);
-writeRoot('nav', navSections);
-writeRoot('footer', footerSections);
-writeRoot('about-us/overview', aboutSections);
-writeRoot('student/articles/high-school-students-can-start-saving-money-college', articleSections);
+// Overlays into pages the wizard already created.
+writeRootOverlay('index', indexSections);
+writeRootOverlay('nav', navSections);
+writeRootOverlay('footer', footerSections);
+
+// New content pages — full cq:Page nodes, including intermediate container pages
+// so no path segment defaults to nt:folder (which caused the root constraint error).
+writePage(['about-us'], 'About Us');
+writePage(['about-us', 'overview'], 'Overview', aboutSections);
+writePage(['student'], 'Student');
+writePage(['student', 'articles'], 'Articles');
+writePage(['student', 'articles', 'high-school-students-can-start-saving-money-college'],
+  'How to save money in high school', articleSections);
 
 // --- META-INF ------------------------------------------------------------
 const vaultDir = path.join(OUT, 'META-INF', 'vault');
@@ -244,8 +293,8 @@ fs.writeFileSync(path.join(vaultDir, 'filter.xml'), `<?xml version="1.0" encodin
     <filter root="/content/citizensbank/index/jcr:content/root"/>
     <filter root="/content/citizensbank/nav/jcr:content/root"/>
     <filter root="/content/citizensbank/footer/jcr:content/root"/>
-    <filter root="/content/citizensbank/about-us/overview/jcr:content/root"/>
-    <filter root="/content/citizensbank/student/articles/high-school-students-can-start-saving-money-college/jcr:content/root"/>
+    <filter root="/content/citizensbank/about-us"/>
+    <filter root="/content/citizensbank/student"/>
 </workspaceFilter>
 `);
 fs.writeFileSync(path.join(vaultDir, 'properties.xml'), `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -253,9 +302,9 @@ fs.writeFileSync(path.join(vaultDir, 'properties.xml'), `<?xml version="1.0" enc
 <properties>
     <comment>CitizensFSI content overlay</comment>
     <entry key="name">citizens-content</entry>
-    <entry key="version">1.1</entry>
+    <entry key="version">1.2</entry>
     <entry key="group">aemxsc</entry>
-    <entry key="description">Overlays jcr:content/root for index, nav, footer, about-us/overview, and the student savings article.</entry>
+    <entry key="description">Overlays index/nav/footer content roots and creates about-us/overview and the student savings article as full cq:Page nodes.</entry>
 </properties>
 `);
 
