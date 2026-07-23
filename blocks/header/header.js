@@ -53,6 +53,16 @@ export default async function decorate(block) {
   top.className = 'nav-top';
   if (brand) top.append(brand);
   if (audience) top.append(audience);
+
+  // Search box (visual match to citizensbank.com; submits to a search route).
+  const search = document.createElement('form');
+  search.className = 'nav-search';
+  search.setAttribute('role', 'search');
+  search.action = '/search';
+  search.innerHTML = '<span class="nav-search-icon" aria-hidden="true"></span>'
+    + '<input type="search" name="q" placeholder="How can we help you?" aria-label="Search Citizens">';
+  top.append(search);
+
   if (tools) top.append(tools);
 
   const bottom = document.createElement('div');

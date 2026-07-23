@@ -1,27 +1,30 @@
-/* Citizens FDIC compliance banner (dcom/cbds-c-fdic): small logo + fine print. */
+/* Citizens FDIC compliance bar: FDIC logo + fine italic print, below the nav. */
 .fdic-banner {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-  background: var(--light-color, #f6f6f6);
+  background: #fff;
   border-bottom: 1px solid var(--brand-border, #e9e9e9);
-  font-size: 12px;
-  color: var(--text-muted-color, #636262);
+  padding: 8px 0;
 }
 
 .fdic-banner > div {
-  margin: 0;
+  max-width: var(--content-max-width, 1200px);
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.fdic-banner img {
-  display: block;
-  width: auto;
-  height: 28px;
+/* First cell is the FDIC logo (self-hosted SVG). */
+.fdic-banner > div > div:first-child {
+  flex: none;
+  width: 46px;
+  height: 22px;
+  background: url("/images/fdic.svg") left center / contain no-repeat;
 }
 
 .fdic-banner p {
   margin: 0;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-muted-color, #636262);
 }
-
-/* code-sync 20260722 */
