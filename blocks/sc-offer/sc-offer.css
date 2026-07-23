@@ -1,7 +1,13 @@
-/* sc-offer — DA Structured Content offer card, Citizens brand. */
+/* sc-offer — DA Structured Content offer cards in a grid, Citizens brand. */
 .sc-offer {
-  max-width: 620px;
+  max-width: 1040px;
   margin: 24px 0;
+}
+
+.sc-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .sc-offer-card {
@@ -9,16 +15,21 @@
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .sc-offer-media {
-  height: 200px;
+  height: 180px;
   background-size: cover;
   background-position: center;
 }
 
 .sc-offer-body {
-  padding: 22px 24px 24px;
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .sc-offer-pre {
@@ -32,7 +43,7 @@
 
 .sc-offer-head {
   font-family: var(--heading-font-family, "fira sans", sans-serif);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 10px;
@@ -40,14 +51,16 @@
 }
 
 .sc-offer-det {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-muted-color, #636262);
   line-height: 1.5;
   margin: 0 0 18px;
 }
 
-.sc-offer-cta {
+/* Higher specificity than the site's global a:any-link (green) so the CTA text stays white. */
+.sc-offer-card a.sc-offer-cta:any-link {
   display: inline-block;
+  align-self: flex-start;
   background: var(--cta-color, #d93d00);
   color: #fff;
   text-decoration: none;
@@ -56,15 +69,15 @@
   font-weight: 600;
 }
 
-.sc-offer-cta:hover {
+.sc-offer-card a.sc-offer-cta:hover {
   background: var(--cta-hover, #ad3000);
+  color: #fff;
 }
 
 .sc-offer-src {
   font-size: 12px;
   color: var(--text-muted-color, #636262);
-  margin: 0;
-  padding: 0 24px 18px;
+  margin: 16px 0 0;
 }
 
 .sc-offer-src code {
@@ -78,4 +91,4 @@
   padding: 18px 0;
 }
 
-/* code-sync 20260723 */
+/* code-sync 20260723b */
