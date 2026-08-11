@@ -1,6 +1,6 @@
 {
   "project": "New York Life",
-  "editUrlLabel": "AEM Editor",
+  "editUrlLabel": "Experience Workspace",
   "host": "www.newyorklife.com",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "editUrlPattern": "https://da.live/canvas#/{{org}}/{{site}}{{pathname}}"
 }
