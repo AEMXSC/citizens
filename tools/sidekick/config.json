@@ -1,6 +1,5 @@
 {
-  "project": "New York Life",
+  "project": "Citizens",
   "editUrlLabel": "Experience Workspace",
-  "host": "www.newyorklife.com",
-  "editUrlPattern": "https://da.live/canvas#/{{org}}/{{site}}{{pathname}}"
+  "editUrlPattern": "https://da.live/canvas?nx=exp-workspace#/{{org}}/{{site}}{{pathname}}"
 }
