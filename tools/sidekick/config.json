@@ -1,5 +1,5 @@
 {
   "project": "Citizens",
   "editUrlLabel": "Experience Workspace",
-  "editUrlPattern": "https://da.live/canvas?nx=exp-workspace#/{{org}}/{{site}}{{pathname}}"
+  "editUrlPattern": "https://da.live/canvas#/{{org}}/{{site}}{{pathname}}"
 }
