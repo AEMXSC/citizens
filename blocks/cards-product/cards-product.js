@@ -5,18 +5,25 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     moveInstrumentation(row, li);
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      // Drop the empty image cell these no-image product cards produce.
-      if (div.children.length === 0 && div.textContent.trim() === '') {
-        div.remove();
-        return;
-      }
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-product-card-image';
-      else div.className = 'cards-product-card-body';
-    });
 
-    // Make the whole card clickable via the title link, if present.
+    // Cards are authored two ways: one cell holding heading+copy+link, or
+    // separate cells per part. Normalise both into a single card body (plus an
+    // optional image cell) so the layout is consistent.
+    const body = document.createElement('div');
+    body.className = 'cards-product-card-body';
+    [...row.children].forEach((cell) => {
+      if (cell.children.length === 1 && cell.querySelector('picture')) {
+        const image = document.createElement('div');
+        image.className = 'cards-product-card-image';
+        while (cell.firstElementChild) image.append(cell.firstElementChild);
+        li.append(image);
+      } else {
+        while (cell.firstElementChild) body.append(cell.firstElementChild);
+      }
+    });
+    if (body.childElementCount) li.append(body);
+
+    // Make the whole card clickable via its link, if present.
     const link = li.querySelector('a[href]');
     if (link) li.dataset.href = link.getAttribute('href');
     ul.append(li);
@@ -33,4 +40,4 @@ export default function decorate(block) {
   block.append(ul);
 }
 
-// code-sync 20260722
+// code-sync 20260813-cardfix
