@@ -429,6 +429,11 @@ async function loadPage() {
   loadDelayed();
 }
 
+// Universal Editor support - instrument the DOM before decoration, on the UE host only.
+if (/\.(stage-ue|ue)\.da\.live$/.test(window.location.hostname)) {
+  await import(`${window.hlx.codeBasePath}/ue/scripts/ue.js`).then(({ default: ue }) => ue());
+}
+
 loadPage();
 
-// code-sync 20260722
+// code-sync 20260813-ue
