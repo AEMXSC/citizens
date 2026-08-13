@@ -73,7 +73,7 @@
 
 .email-subscribe .email-subscribe-submit:hover,
 .email-subscribe .email-subscribe-submit:focus {
-  background-color: #0468ff;
+  background-color: var(--brand-green, #008555);
 }
 
 @media (width >= 900px) {
@@ -82,4 +82,4 @@
   }
 }
 
-/* code-sync 20260722 */
+/* code-sync 20260813-brand */

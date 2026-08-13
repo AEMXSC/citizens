@@ -59,7 +59,7 @@
    When the block has an image, it is a partnership LOGO (not a background).
    Render as a horizontal band: navy gradient bg, logo left, text + CTA right. */
 .hero-promo:has(picture) {
-  background: linear-gradient(90deg, #000a62 0%, #0a1a8c 55%, #16309e 100%);
+  background: linear-gradient(90deg, #004f33 0%, #006844 55%, #008555 100%);
   border-radius: 0;
 }
 
@@ -199,4 +199,4 @@
   color: #fff;
 }
 
-/* code-sync 20260722 */
+/* code-sync 20260813-brand */

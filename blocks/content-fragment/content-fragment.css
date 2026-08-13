@@ -5,7 +5,7 @@
 }
 
 .content-fragment .cf-status {
-  color: #474952;
+  color: var(--text-muted-color, #636262);
   font-size: var(--body-font-size-s);
 }
 
@@ -26,13 +26,13 @@
 }
 
 .content-fragment .cf-card:hover {
-  box-shadow: 0 12px 34px rgb(0 10 98 / 12%);
+  box-shadow: 0 12px 34px rgb(0 0 0 / 12%);
   transform: translateY(-3px);
 }
 
 .content-fragment .cf-media {
   aspect-ratio: 3 / 2;
-  background: #cce3ff;
+  background: var(--section-green, #e9f4ee);
   overflow: hidden;
 }
 
@@ -55,10 +55,10 @@
 }
 
 .content-fragment .cf-body p {
-  color: #474952;
+  color: var(--text-muted-color, #636262);
   font-size: var(--body-font-size-s);
   margin: 0;
   line-height: 1.55;
 }
 
-/* code-sync 20260722 */
+/* code-sync 20260813-brand */
