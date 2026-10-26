@@ -2,4 +2,5 @@ sitemaps:
   default:
     source: /query-index.json
     destination: /sitemap.xml
+    origin: https://main--citizens--aemxsc.aem.live
     lastmod: YYYY-MM-DD
