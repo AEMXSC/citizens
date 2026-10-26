@@ -1,0 +1,18 @@
+application:
+  runtimeManifest:
+    packages:
+      content-ai:
+        license: Apache-2.0
+        inputs:
+          CONTENT_AI_API_KEY: $CONTENT_AI_API_KEY
+          CONTENT_AI_BASE_URL: $CONTENT_AI_BASE_URL
+          ALLOWED_ORIGINS: $ALLOWED_ORIGINS
+        actions:
+          search:
+            function: actions/search.js
+            web: 'raw'
+            runtime: nodejs:20
+          gensearch:
+            function: actions/gensearch.js
+            web: 'raw'
+            runtime: nodejs:20

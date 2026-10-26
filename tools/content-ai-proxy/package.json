@@ -1,0 +1,9 @@
+{
+  "name": "content-ai-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "App Builder web actions that proxy the content-ai-search block to Adobe Content AI",
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=18" }
+}
