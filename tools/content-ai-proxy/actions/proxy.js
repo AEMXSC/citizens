@@ -27,11 +27,19 @@ function corsHeaders(origin) {
     : {};
 }
 
+// Raw web actions deliver the body as base64 or plain text depending on content type
+// (and do not always set __ow_isBase64Encoded), so accept either.
 function readBody(params) {
   const raw = params.__ow_body;
   if (!raw) return null;
-  const text = params.__ow_isBase64Encoded ? Buffer.from(raw, 'base64').toString('utf8') : raw;
-  return typeof text === 'string' ? text : JSON.stringify(text);
+  if (typeof raw !== 'string') return JSON.stringify(raw);
+  if (params.__ow_isBase64Encoded) return Buffer.from(raw, 'base64').toString('utf8');
+  try {
+    JSON.parse(raw);
+    return raw;
+  } catch (e) {
+    return Buffer.from(raw, 'base64').toString('utf8');
+  }
 }
 
 export function createHandler(endpoint, fetchImpl = fetch) {

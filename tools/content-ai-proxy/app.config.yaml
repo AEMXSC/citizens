@@ -11,8 +11,12 @@ application:
           search:
             function: actions/search.js
             web: 'raw'
+            annotations:
+              web-custom-options: true
             runtime: nodejs:20
           gensearch:
             function: actions/gensearch.js
             web: 'raw'
+            annotations:
+              web-custom-options: true
             runtime: nodejs:20

@@ -44,3 +44,10 @@ test('decodes base64 body', async () => {
   await main({ ...base, __ow_isBase64Encoded: true, __ow_body: Buffer.from('{"q":1}').toString('base64') });
   assert.equal(sent, '{"q":1}');
 });
+
+test('decodes base64 body even without the encoding flag', async () => {
+  let sent;
+  const main = createHandler('search', async (u, i) => { sent = i.body; return { status: 200, text: async () => '{}' }; });
+  await main({ ...base, __ow_body: Buffer.from('{"q":2}').toString('base64') });
+  assert.equal(sent, '{"q":2}');
+});
