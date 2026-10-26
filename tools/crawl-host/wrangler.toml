@@ -5,3 +5,8 @@ workers_dev = true
 
 [vars]
 ORIGIN = "https://main--citizens--aemxsc.aem.live"
+
+# Last 24h of requests, readable at /__crawl-log, to see what the Content AI crawler fetched.
+[[kv_namespaces]]
+binding = "CRAWL_LOG"
+id = "f2d94529c12c4c959991360df42ea4bb"
