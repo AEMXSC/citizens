@@ -1,6 +1,7 @@
 // Demo crawl host for the Citizens EDS site. *.aem.live forces robots.txt "Disallow: /" and
 // X-Robots-Tag: noindex, so Content AI's crawler indexes nothing there. This Worker serves an
-// open robots.txt, strips the noindex header and points the sitemap at itself. Not for SEO use.
+// open robots.txt, strips the noindex header and rewrites the origin host in HTML and the
+// sitemap (canonical, og:url, sitemap locs) to itself. Not for SEO use.
 
 const STRIPPED_HEADERS = ['x-robots-tag'];
 const LOG_PATH = '/__crawl-log';
@@ -53,7 +54,11 @@ export default {
     const headers = new Headers(upstream.headers);
     STRIPPED_HEADERS.forEach((h) => headers.delete(h));
 
-    if (url.pathname.endsWith('sitemap.xml') && upstream.ok) {
+    // Canonical/og:url (and sitemap entries) point at *.aem.live, which is noindex; a crawler
+    // following them drops every page. Rewrite the origin host to this one.
+    const type = headers.get('content-type') || '';
+    const rewritable = type.includes('text/html') || url.pathname.endsWith('sitemap.xml');
+    if (rewritable && upstream.ok) {
       const body = (await upstream.text()).replaceAll(origin.origin, `https://${url.host}`);
       headers.delete('content-length');
       return new Response(body, { status: upstream.status, headers });
