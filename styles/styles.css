@@ -502,7 +502,15 @@ body[data-experience="agent"] :is(header, main, footer) a:any-link {
   min-height: 24px;
 }
 
-body[data-experience="agent"] header .nav-hamburger :is(button, [role="button"]) {
+body[data-experience="agent"] header button.nav-hamburger {
   min-width: 44px;
   min-height: 44px;
+}
+
+/* agent: reserve the full desktop header (utility bar + nav + mega rows measure 296px) so the
+   text-only first screen does not jump when the header loads */
+@media (width > 900px) {
+  body[data-experience="agent"] header {
+    min-height: 296px;
+  }
 }
