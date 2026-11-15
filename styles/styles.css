@@ -492,3 +492,16 @@ main .section.green .cards-editorial > ul > li:hover .cards-editorial-card-body 
 /* code-sync 20260722 */
 
 /* deploy nudge 20260723b */
+
+/* homepage cohorts: personal AI agent experience (body[data-experience] is set by
+   scripts/cohorts.js on the cohort page only). Targets at least 24px, buttons 44px. */
+body[data-experience="agent"] :is(header, main, footer) a:any-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+body[data-experience="agent"] header .nav-hamburger :is(button, [role="button"]) {
+  min-width: 44px;
+  min-height: 44px;
+}

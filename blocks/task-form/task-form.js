@@ -98,6 +98,12 @@ export default function decorate(block) {
   }
 
   form.append(fieldset, button);
+  // every answer goes into the URL at once, so a reload keeps it (agent-experience rule 7)
+  form.addEventListener('change', (e) => {
+    if (e.target.name !== PARAM) return;
+    setParam(e.target.value);
+    show(e.target.value);
+  });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = form.querySelector(`input[name="${PARAM}"]:checked`)?.value || '';
