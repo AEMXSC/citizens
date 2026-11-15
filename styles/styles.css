@@ -495,6 +495,7 @@ main .section.green .cards-editorial > ul > li:hover .cards-editorial-card-body 
 
 /* homepage cohorts: personal AI agent experience (body[data-experience] is set by
    scripts/cohorts.js on the cohort page only). Targets at least 24px, buttons 44px. */
+/* stylelint-disable-next-line no-descending-specificity -- agent-only sizing, no colour */
 body[data-experience="agent"] :is(header, main, footer) a:any-link {
   display: inline-flex;
   align-items: center;
