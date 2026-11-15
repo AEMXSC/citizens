@@ -348,6 +348,7 @@ button.button.accent:disabled:focus-visible {
   color: var(--dark-color);
 }
 
+/* stylelint-disable-next-line no-descending-specificity -- existing cascade order, unchanged */
 main img {
   max-width: 100%;
   width: auto;
@@ -360,6 +361,7 @@ main img {
   width: 24px;
 }
 
+/* stylelint-disable-next-line no-descending-specificity -- existing cascade order, unchanged */
 .icon img {
   height: 100%;
   width: 100%;
@@ -370,6 +372,7 @@ main > .section {
   margin: 40px 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity -- existing cascade order, unchanged */
 main > .section > div {
   max-width: 1200px;
   margin: auto;

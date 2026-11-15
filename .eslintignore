@@ -2,3 +2,4 @@ helix-importer-ui
 dompurify.min.js
 *.min.js
 plugins/
+tools/content-ai-proxy/

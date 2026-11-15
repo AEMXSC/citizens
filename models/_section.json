@@ -47,36 +47,6 @@
               "value": "article"
             }
           ]
-        },
-        {
-          "component": "text",
-          "name": "slot",
-          "label": "Cohort slot",
-          "description": "Sections sharing a slot compete; the most specific Cohorts match wins (homepage cohorts)"
-        },
-        {
-          "component": "text",
-          "name": "cohorts",
-          "label": "Cohorts",
-          "description": "Only for these experiences, e.g. customer, prospect:home. Empty = everyone"
-        },
-        {
-          "component": "text",
-          "name": "hide-for",
-          "label": "Hide for",
-          "description": "Removed for these experiences, e.g. agent"
-        },
-        {
-          "component": "text",
-          "name": "promote",
-          "label": "Promote",
-          "description": "Moved under the first section for these experiences"
-        },
-        {
-          "component": "text",
-          "name": "insight",
-          "label": "Insight",
-          "description": "The data finding behind this section, shown in the demo's Explain sections mode"
         }
       ]
     }

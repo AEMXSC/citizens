@@ -25,6 +25,8 @@ function imgUrl(ref) {
 
 async function fetchDoc(path, preferredEnv) {
   const envs = preferredEnv === 'preview' ? ['preview', 'live'] : ['live', 'preview'];
+  // sequential on purpose: try each environment in order and return the first hit
+  // eslint-disable-next-line no-restricted-syntax
   for (const env of envs) {
     try {
       // eslint-disable-next-line no-await-in-loop
