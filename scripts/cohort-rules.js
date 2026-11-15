@@ -31,7 +31,7 @@ export default {
   // (citizens-poc-work/synth/gen.mjs), not measured traffic. Swap in real Optel bundles later.
   insights: {
     src: '/cohorts/cohorts.json',
-    label: 'Illustrative data',
+    label: 'Illustrative',
     pages: {
       '/checking': 'Checking',
       '/savings': 'Savings',
