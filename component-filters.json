@@ -20,7 +20,8 @@
       "callout",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "task-form"
     ]
   },
   {
@@ -99,6 +100,12 @@
     "id": "feature-grid",
     "components": [
       "feature-card"
+    ]
+  },
+  {
+    "id": "task-form",
+    "components": [
+      "task-form-option"
     ]
   }
 ]
