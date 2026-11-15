@@ -1,0 +1,1585 @@
+{
+ "meta": {
+  "domain": "main--citizens--aemxsc.aem.live",
+  "path": "/",
+  "start": "2026-10-15T00:14:58.811Z",
+  "end": "2026-11-13T23:58:46.358Z",
+  "views": 600000,
+  "bundles": 6000,
+  "weeks": 5,
+  "fullWeeks": 4,
+  "note": "ILLUSTRATIVE: synthetic bundles generated for the demo (plausible US retail-bank shares), not measured traffic. Sampled page views, bots and prerenders excluded (personal AI agents count only where a rule asks for them). `weeks[]` are 7-day windows from `start`; the last one is partial when `weeks > fullWeeks`. `growth` is the last full week over the first, null without two full weeks of 10+ bundles each. `today.vsAll` compares a rule with all views (1 = the same; `didNothing` below 1 is better). `standsOut` marks a small rule (under 5% of views) that is clearly more engaged or growing 2x or more: call it out by name. `today.supportRate` is the rule's secondary action (`support`) on the homepage. `secondOrder` (with --site) is site-wide: `first[]` = pages people open right after the homepage (share of those arrivals), each with `next[]` = what they click on there; `assists.pages[]` = pages viewed right before the conversion, `lift` against the site rate. Rules with `modelled: true` depend on on-device memory, which Optel cannot see: they are estimated at steady state from what views do today. Rules with `firstVisitAssumed: true` ask for a first visit, which Optel cannot see either: every view counts as one, so their share is an upper bound. `topClicks[].link: false` is a click that opened something on the page (menu, search, carousel) rather than a link: its `click` is the element selector.",
+  "illustrative": true
+ },
+ "columns": [
+  {
+   "head": "Entry source",
+   "nodes": [
+    {
+     "id": "e:direct",
+     "label": "Direct",
+     "views": 219500
+    },
+    {
+     "id": "e:search",
+     "label": "Search",
+     "views": 139300
+    },
+    {
+     "id": "e:internal",
+     "label": "Internal navigation",
+     "views": 110400
+    },
+    {
+     "id": "e:paid",
+     "label": "Paid",
+     "views": 65400
+    },
+    {
+     "id": "e:owned",
+     "label": "Email & owned campaigns",
+     "views": 25700
+    },
+    {
+     "id": "e:ai",
+     "label": "AI assistants",
+     "views": 16400
+    },
+    {
+     "id": "e:social",
+     "label": "Social",
+     "views": 10200
+    },
+    {
+     "id": "e:referral",
+     "label": "Other referrers",
+     "views": 8900
+    },
+    {
+     "id": "e:agent",
+     "label": "Personal AI agents",
+     "views": 4200
+    }
+   ]
+  },
+  {
+   "head": "Device",
+   "nodes": [
+    {
+     "id": "d:desktop",
+     "label": "Desktop",
+     "views": 270000
+    },
+    {
+     "id": "d:mobile",
+     "label": "Mobile",
+     "views": 330000
+    }
+   ]
+  },
+  {
+   "head": "Rule that fires · first match wins",
+   "nodes": [
+    {
+     "id": "r:personal-agent",
+     "label": "1 · A personal AI agent is browsing",
+     "sub": "",
+     "signal": "agent",
+     "views": 4200
+    },
+    {
+     "id": "r:signed-in-before",
+     "label": "2 · Has signed in before",
+     "sub": "",
+     "signal": "memory",
+     "views": 105800
+    },
+    {
+     "id": "r:ai-referred",
+     "label": "3 · Sent by an AI assistant",
+     "sub": "",
+     "signal": "link",
+     "views": 15100
+    },
+    {
+     "id": "r:campaign",
+     "label": "4 · Clicked an ad or campaign link",
+     "sub": "",
+     "signal": "link",
+     "views": 91100
+    },
+    {
+     "id": "r:returning-interest",
+     "label": "5 · Back with a product interest",
+     "sub": "",
+     "signal": "memory",
+     "views": 13900
+    },
+    {
+     "id": "r:mobile-first-visit",
+     "label": "6 · First visit on a phone",
+     "sub": "",
+     "signal": "device",
+     "views": 263600
+    },
+    {
+     "id": "r:none",
+     "label": "No rule matched",
+     "sub": "Original page",
+     "signal": "none",
+     "views": 106300
+    }
+   ]
+  },
+  {
+   "head": "Homepage experience",
+   "nodes": [
+    {
+     "id": "x:agent",
+     "label": "Personal agent: plain & actionable",
+     "sub": "The task as a form · every product named · nothing hidden behind carousels",
+     "views": 4200
+    },
+    {
+     "id": "x:customer",
+     "label": "Customer: sign-in first",
+     "sub": "Log in · top tasks · branch and banker · one offer",
+     "views": 105800
+    },
+    {
+     "id": "x:prospect",
+     "label": "Prospect: answer & act",
+     "sub": "Repeats the ad or the interest · open an account · meet a banker",
+     "views": 120100
+    },
+    {
+     "id": "x:mobile",
+     "label": "Mobile: quick tasks",
+     "sub": "Thumb-sized top tasks first · shorter page",
+     "views": 263600
+    },
+    {
+     "id": "x:default",
+     "label": "Original homepage",
+     "sub": "Unchanged: the same page as the holdout",
+     "views": 106300
+    }
+   ]
+  }
+ ],
+ "links": [
+  {
+   "s": "e:direct",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 33800,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:none",
+   "signal": "none",
+   "views": 106300,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "r:none",
+   "t": "x:default",
+   "signal": "none",
+   "views": 106300,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:direct",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 112500,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "d:mobile",
+   "t": "r:mobile-first-visit",
+   "signal": "device",
+   "views": 263600,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "r:mobile-first-visit",
+   "t": "x:mobile",
+   "signal": "device",
+   "views": 263600,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "e:social",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 2000,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:internal",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 46400,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:search",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 83200,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "e:paid",
+   "t": "d:mobile",
+   "signal": "link",
+   "views": 45100,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "d:mobile",
+   "t": "r:campaign",
+   "signal": "link",
+   "views": 60400,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "r:campaign",
+   "t": "x:prospect",
+   "signal": "link",
+   "views": 91100,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "e:direct",
+   "t": "d:desktop",
+   "signal": "memory",
+   "views": 73200,
+   "rules": [
+    "signed-in-before",
+    "returning-interest"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:signed-in-before",
+   "signal": "memory",
+   "views": 105800,
+   "rules": [
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "r:signed-in-before",
+   "t": "x:customer",
+   "signal": "memory",
+   "views": 105800,
+   "rules": [
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "e:ai",
+   "t": "d:mobile",
+   "signal": "link",
+   "views": 6000,
+   "rules": [
+    "ai-referred"
+   ]
+  },
+  {
+   "s": "d:mobile",
+   "t": "r:ai-referred",
+   "signal": "link",
+   "views": 6000,
+   "rules": [
+    "ai-referred"
+   ]
+  },
+  {
+   "s": "r:ai-referred",
+   "t": "x:prospect",
+   "signal": "link",
+   "views": 15100,
+   "rules": [
+    "ai-referred"
+   ]
+  },
+  {
+   "s": "e:search",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 21500,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:internal",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 55000,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "e:ai",
+   "t": "d:desktop",
+   "signal": "link",
+   "views": 9100,
+   "rules": [
+    "ai-referred"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:ai-referred",
+   "signal": "link",
+   "views": 9100,
+   "rules": [
+    "ai-referred"
+   ]
+  },
+  {
+   "s": "e:paid",
+   "t": "d:desktop",
+   "signal": "link",
+   "views": 20300,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:campaign",
+   "signal": "link",
+   "views": 30700,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "e:search",
+   "t": "d:desktop",
+   "signal": "memory",
+   "views": 34600,
+   "rules": [
+    "returning-interest",
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:returning-interest",
+   "signal": "memory",
+   "views": 13900,
+   "rules": [
+    "returning-interest"
+   ]
+  },
+  {
+   "s": "r:returning-interest",
+   "t": "x:prospect",
+   "signal": "memory",
+   "views": 13900,
+   "rules": [
+    "returning-interest"
+   ]
+  },
+  {
+   "s": "e:internal",
+   "t": "d:desktop",
+   "signal": "memory",
+   "views": 9000,
+   "rules": [
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "e:owned",
+   "t": "d:mobile",
+   "signal": "link",
+   "views": 15300,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "e:social",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 8200,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "e:owned",
+   "t": "d:desktop",
+   "signal": "link",
+   "views": 10400,
+   "rules": [
+    "campaign"
+   ]
+  },
+  {
+   "s": "e:referral",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 2300,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:referral",
+   "t": "d:desktop",
+   "signal": "memory",
+   "views": 2600,
+   "rules": [
+    "returning-interest",
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "e:referral",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 4000,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  },
+  {
+   "s": "e:ai",
+   "t": "d:desktop",
+   "signal": "memory",
+   "views": 300,
+   "rules": [
+    "returning-interest",
+    "signed-in-before"
+   ]
+  },
+  {
+   "s": "e:agent",
+   "t": "d:desktop",
+   "signal": "agent",
+   "views": 4200,
+   "rules": [
+    "personal-agent"
+   ]
+  },
+  {
+   "s": "d:desktop",
+   "t": "r:personal-agent",
+   "signal": "agent",
+   "views": 4200,
+   "rules": [
+    "personal-agent"
+   ]
+  },
+  {
+   "s": "r:personal-agent",
+   "t": "x:agent",
+   "signal": "agent",
+   "views": 4200,
+   "rules": [
+    "personal-agent"
+   ]
+  },
+  {
+   "s": "e:ai",
+   "t": "d:desktop",
+   "signal": "none",
+   "views": 300,
+   "rules": [
+    "none"
+   ]
+  },
+  {
+   "s": "e:ai",
+   "t": "d:mobile",
+   "signal": "device",
+   "views": 700,
+   "rules": [
+    "mobile-first-visit"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "personal-agent",
+   "label": "A personal AI agent is browsing",
+   "experience": "agent",
+   "signal": "agent",
+   "modelled": false,
+   "firstVisitAssumed": false,
+   "views": 4200,
+   "share": 0.007,
+   "bundles": 42,
+   "lowSample": false,
+   "today": {
+    "goalRate": 0.8571428571428571,
+    "supportRate": null,
+    "didNothing": 0.14285714285714285,
+    "navigated": 0.8571428571428571,
+    "vsAll": {
+     "navigated": 1.3725265927027335,
+     "didNothing": 0.6377551020408163
+    },
+    "topClicks": [
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.2857142857142857,
+      "bundles": 12
+     },
+     {
+      "click": "/home-equity",
+      "link": true,
+      "share": 0.16666666666666666,
+      "bundles": 7
+     },
+     {
+      "click": "/savings",
+      "link": true,
+      "share": 0.14285714285714285,
+      "bundles": 6
+     },
+     {
+      "click": "/credit-cards",
+      "link": true,
+      "share": 0.14285714285714285,
+      "bundles": 6
+     },
+     {
+      "click": "/appointment",
+      "link": true,
+      "share": 0.11904761904761904,
+      "bundles": 5
+     }
+    ]
+   },
+   "weeks": [
+    800,
+    700,
+    1100,
+    900,
+    700
+   ],
+   "growth": null,
+   "standsOut": false
+  },
+  {
+   "id": "signed-in-before",
+   "label": "Has signed in before",
+   "experience": "customer",
+   "signal": "memory",
+   "modelled": true,
+   "firstVisitAssumed": false,
+   "views": 105800,
+   "share": 0.17633333333333334,
+   "bundles": 1058,
+   "lowSample": false,
+   "today": {
+    "goalRate": null,
+    "supportRate": null,
+    "didNothing": 0,
+    "navigated": 1,
+    "vsAll": {
+     "navigated": 1.6012810248198557,
+     "didNothing": 0
+    },
+    "topClicks": [
+     {
+      "click": "olb.citizensbank.com/login",
+      "link": true,
+      "share": 1,
+      "bundles": 1058
+     }
+    ]
+   },
+   "weeks": [
+    25900,
+    22700,
+    25400,
+    24400,
+    7400
+   ],
+   "growth": 0.9420849420849421,
+   "standsOut": false
+  },
+  {
+   "id": "ai-referred",
+   "label": "Sent by an AI assistant",
+   "experience": "prospect",
+   "signal": "link",
+   "modelled": false,
+   "firstVisitAssumed": false,
+   "views": 15100,
+   "share": 0.025166666666666667,
+   "bundles": 151,
+   "lowSample": false,
+   "today": {
+    "goalRate": 0.5960264900662252,
+    "supportRate": 0.10596026490066225,
+    "didNothing": 0.19205298013245034,
+    "navigated": 0.6357615894039735,
+    "vsAll": {
+     "navigated": 1.018032969421895,
+     "didNothing": 0.8573793755912962
+    },
+    "topClicks": [
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.19205298013245034,
+      "bundles": 29
+     },
+     {
+      "click": "/offers/free-checking",
+      "link": true,
+      "share": 0.10596026490066225,
+      "bundles": 16
+     },
+     {
+      "click": "/credit-cards",
+      "link": true,
+      "share": 0.09933774834437085,
+      "bundles": 15
+     },
+     {
+      "click": "/savings",
+      "link": true,
+      "share": 0.09271523178807947,
+      "bundles": 14
+     },
+     {
+      "click": "/home-equity",
+      "link": true,
+      "share": 0.052980132450331126,
+      "bundles": 8
+     }
+    ]
+   },
+   "weeks": [
+    1900,
+    2800,
+    4300,
+    4600,
+    1500
+   ],
+   "growth": 2.4210526315789473,
+   "standsOut": true
+  },
+  {
+   "id": "campaign",
+   "label": "Clicked an ad or campaign link",
+   "experience": "prospect",
+   "signal": "link",
+   "modelled": false,
+   "firstVisitAssumed": false,
+   "views": 91100,
+   "share": 0.15183333333333332,
+   "bundles": 911,
+   "lowSample": false,
+   "today": {
+    "goalRate": 0.38529088913282106,
+    "supportRate": null,
+    "didNothing": 0.3918770581778266,
+    "navigated": 0.45554335894621295,
+    "vsAll": {
+     "navigated": 0.7294529366632713,
+     "didNothing": 1.7494511525795828
+    },
+    "topClicks": [
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.09879253567508232,
+      "bundles": 90
+     },
+     {
+      "click": "olb.citizensbank.com/login",
+      "link": true,
+      "share": 0.07025246981339188,
+      "bundles": 64
+     },
+     {
+      "click": "/offers/free-checking",
+      "link": true,
+      "share": 0.07025246981339188,
+      "bundles": 64
+     },
+     {
+      "click": "/home-equity",
+      "link": true,
+      "share": 0.06915477497255763,
+      "bundles": 63
+     },
+     {
+      "click": "/savings",
+      "link": true,
+      "share": 0.06476399560922064,
+      "bundles": 59
+     }
+    ]
+   },
+   "weeks": [
+    20200,
+    22700,
+    21100,
+    20700,
+    6400
+   ],
+   "growth": 1.0247524752475248,
+   "standsOut": false
+  },
+  {
+   "id": "returning-interest",
+   "label": "Back with a product interest",
+   "experience": "prospect",
+   "signal": "memory",
+   "modelled": true,
+   "firstVisitAssumed": false,
+   "views": 13900,
+   "share": 0.023166666666666665,
+   "bundles": 139,
+   "lowSample": false,
+   "today": {
+    "goalRate": null,
+    "supportRate": null,
+    "didNothing": 0,
+    "navigated": 1,
+    "vsAll": {
+     "navigated": 1.6012810248198557,
+     "didNothing": 0
+    },
+    "topClicks": [
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.5611510791366906,
+      "bundles": 78
+     },
+     {
+      "click": "/credit-cards",
+      "link": true,
+      "share": 0.1366906474820144,
+      "bundles": 19
+     },
+     {
+      "click": "/savings",
+      "link": true,
+      "share": 0.10071942446043165,
+      "bundles": 14
+     },
+     {
+      "click": "/home-equity",
+      "link": true,
+      "share": 0.06474820143884892,
+      "bundles": 9
+     },
+     {
+      "click": "/auto-loans",
+      "link": true,
+      "share": 0.05755395683453238,
+      "bundles": 8
+     }
+    ]
+   },
+   "weeks": [
+    2700,
+    2800,
+    4300,
+    2800,
+    1300
+   ],
+   "growth": 1.037037037037037,
+   "standsOut": false
+  },
+  {
+   "id": "mobile-first-visit",
+   "label": "First visit on a phone",
+   "experience": "mobile",
+   "signal": "device",
+   "modelled": false,
+   "firstVisitAssumed": true,
+   "views": 263600,
+   "share": 0.43933333333333335,
+   "bundles": 2636,
+   "lowSample": false,
+   "today": {
+    "goalRate": 0.6483308042488619,
+    "supportRate": null,
+    "didNothing": 0.19688922610015175,
+    "navigated": 0.6483308042488619,
+    "vsAll": {
+     "navigated": 1.038159814649899,
+     "didNothing": 0.8789697593756775
+    },
+    "topClicks": [
+     {
+      "click": "olb.citizensbank.com/login",
+      "link": true,
+      "share": 0.4753414264036419,
+      "bundles": 1253
+     },
+     {
+      "click": "header button.nav-hamburger",
+      "link": false,
+      "share": 0.04400606980273141,
+      "bundles": 116
+     },
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.041350531107739,
+      "bundles": 109
+     },
+     {
+      "click": "/locator",
+      "link": true,
+      "share": 0.03679817905918058,
+      "bundles": 97
+     },
+     {
+      "click": "/savings",
+      "link": true,
+      "share": 0.019726858877086494,
+      "bundles": 52
+     }
+    ]
+   },
+   "weeks": [
+    63700,
+    57000,
+    60700,
+    65000,
+    17200
+   ],
+   "growth": 1.0204081632653061,
+   "standsOut": false
+  },
+  {
+   "id": "none",
+   "label": "No rule matched",
+   "experience": "default",
+   "signal": "none",
+   "modelled": false,
+   "firstVisitAssumed": false,
+   "views": 106300,
+   "share": 0.17716666666666667,
+   "bundles": 1063,
+   "lowSample": false,
+   "today": {
+    "goalRate": 0.3715898400752587,
+    "supportRate": null,
+    "didNothing": 0.40733772342427094,
+    "navigated": 0.27657572906867356,
+    "vsAll": {
+     "navigated": 0.44287546688338436,
+     "didNothing": 1.818471979572638
+    },
+    "topClicks": [
+     {
+      "click": "header button.nav-hamburger",
+      "link": false,
+      "share": 0.09501411100658513,
+      "bundles": 101
+     },
+     {
+      "click": "/locator",
+      "link": true,
+      "share": 0.062088428974600186,
+      "bundles": 66
+     },
+     {
+      "click": "/checking",
+      "link": true,
+      "share": 0.047036688617121354,
+      "bundles": 50
+     },
+     {
+      "click": "/appointment",
+      "link": true,
+      "share": 0.04045155221072436,
+      "bundles": 43
+     },
+     {
+      "click": "/credit-cards",
+      "link": true,
+      "share": 0.028222013170272814,
+      "bundles": 30
+     }
+    ]
+   },
+   "weeks": [
+    23400,
+    25200,
+    25500,
+    26400,
+    5800
+   ],
+   "growth": 1.1282051282051282,
+   "standsOut": false
+  }
+ ],
+ "secondOrder": {
+  "scope": "site",
+  "start": "2026-10-15T00:14:17.165Z",
+  "end": "2026-11-13T23:58:46.358Z",
+  "weeks": 4,
+  "from": "/",
+  "arrivals": 133000,
+  "bundles": 1330,
+  "first": [
+   {
+    "path": "/checking",
+    "views": 35600,
+    "bundles": 356,
+    "share": 0.26766917293233083,
+    "lowSample": false,
+    "onward": 0.42134831460674155,
+    "next": [
+     {
+      "key": "/offers/free-checking",
+      "views": 7000,
+      "bundles": 70,
+      "share": 0.19662921348314608,
+      "lowSample": false
+     },
+     {
+      "key": "/appointment",
+      "views": 5100,
+      "bundles": 51,
+      "share": 0.14325842696629212,
+      "lowSample": false
+     },
+     {
+      "key": "/savings",
+      "views": 2900,
+      "bundles": 29,
+      "share": 0.08146067415730338,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 145100,
+    "nextAll": [
+     {
+      "key": "/",
+      "views": 40900,
+      "bundles": 409,
+      "share": 0.28187456926257753,
+      "lowSample": false
+     }
+    ]
+   },
+   {
+    "path": "/savings",
+    "views": 16800,
+    "bundles": 168,
+    "share": 0.12631578947368421,
+    "lowSample": false,
+    "onward": 0.13690476190476192,
+    "next": [
+     {
+      "key": "/appointment",
+      "views": 1400,
+      "bundles": 14,
+      "share": 0.08333333333333333,
+      "lowSample": true
+     },
+     {
+      "key": "/checking",
+      "views": 900,
+      "bundles": 9,
+      "share": 0.05357142857142857,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 99800,
+    "nextAll": [
+     {
+      "key": "/",
+      "views": 28800,
+      "bundles": 288,
+      "share": 0.28857715430861725,
+      "lowSample": false
+     }
+    ]
+   },
+   {
+    "path": "/locator",
+    "views": 16300,
+    "bundles": 163,
+    "share": 0.12255639097744361,
+    "lowSample": false,
+    "onward": 0.25766871165644173,
+    "next": [
+     {
+      "key": "/appointment",
+      "views": 4200,
+      "bundles": 42,
+      "share": 0.25766871165644173,
+      "lowSample": false
+     }
+    ],
+    "viewsAll": 16300,
+    "nextAll": [
+     {
+      "key": "/",
+      "views": 14300,
+      "bundles": 143,
+      "share": 0.8773006134969326,
+      "lowSample": false
+     }
+    ]
+   },
+   {
+    "path": "/offers/free-checking",
+    "views": 15000,
+    "bundles": 150,
+    "share": 0.11278195488721804,
+    "lowSample": false,
+    "onward": 0.08666666666666667,
+    "next": [
+     {
+      "key": "/checking",
+      "views": 1300,
+      "bundles": 13,
+      "share": 0.08666666666666667,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 15000,
+    "nextAll": []
+   },
+   {
+    "path": "/credit-cards",
+    "views": 14400,
+    "bundles": 144,
+    "share": 0.10827067669172932,
+    "lowSample": false,
+    "onward": 0.041666666666666664,
+    "next": [
+     {
+      "key": "/checking",
+      "views": 600,
+      "bundles": 6,
+      "share": 0.041666666666666664,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 94100,
+    "nextAll": [
+     {
+      "key": "/",
+      "views": 26400,
+      "bundles": 264,
+      "share": 0.28055260361317746,
+      "lowSample": false
+     }
+    ]
+   },
+   {
+    "path": "/appointment",
+    "views": 13000,
+    "bundles": 130,
+    "share": 0.09774436090225563,
+    "lowSample": false,
+    "onward": 0,
+    "next": [],
+    "viewsAll": 13000,
+    "nextAll": []
+   },
+   {
+    "path": "/home-equity",
+    "views": 12800,
+    "bundles": 128,
+    "share": 0.0962406015037594,
+    "lowSample": false,
+    "onward": 0.171875,
+    "next": [
+     {
+      "key": "/appointment",
+      "views": 2200,
+      "bundles": 22,
+      "share": 0.171875,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 58300,
+    "nextAll": []
+   },
+   {
+    "path": "/auto-loans",
+    "views": 4800,
+    "bundles": 48,
+    "share": 0.03609022556390978,
+    "lowSample": false,
+    "onward": 0,
+    "next": [],
+    "viewsAll": 47100,
+    "nextAll": []
+   },
+   {
+    "path": "/small-business",
+    "views": 4300,
+    "bundles": 43,
+    "share": 0.032330827067669175,
+    "lowSample": false,
+    "onward": 0.06976744186046512,
+    "next": [
+     {
+      "key": "/appointment",
+      "views": 300,
+      "bundles": 3,
+      "share": 0.06976744186046512,
+      "lowSample": true
+     }
+    ],
+    "viewsAll": 4300,
+    "nextAll": []
+   }
+  ],
+  "byDevice": {
+   "mobile": [
+    {
+     "path": "/checking",
+     "views": 17900,
+     "bundles": 179,
+     "share": 0.24156545209176788,
+     "lowSample": false,
+     "onward": 0.43575418994413406,
+     "next": [
+      {
+       "key": "/offers/free-checking",
+       "views": 3900,
+       "bundles": 39,
+       "share": 0.21787709497206703,
+       "lowSample": false
+      },
+      {
+       "key": "/appointment",
+       "views": 2100,
+       "bundles": 21,
+       "share": 0.11731843575418995,
+       "lowSample": true
+      },
+      {
+       "key": "/savings",
+       "views": 1800,
+       "bundles": 18,
+       "share": 0.1005586592178771,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 84800,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 20700,
+       "bundles": 207,
+       "share": 0.24410377358490565,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/savings",
+     "views": 10100,
+     "bundles": 101,
+     "share": 0.13630229419703105,
+     "lowSample": false,
+     "onward": 0.13861386138613863,
+     "next": [
+      {
+       "key": "/appointment",
+       "views": 800,
+       "bundles": 8,
+       "share": 0.07920792079207921,
+       "lowSample": true
+      },
+      {
+       "key": "/checking",
+       "views": 600,
+       "bundles": 6,
+       "share": 0.0594059405940594,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 59500,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 14900,
+       "bundles": 149,
+       "share": 0.2504201680672269,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/locator",
+     "views": 9700,
+     "bundles": 97,
+     "share": 0.13090418353576247,
+     "lowSample": false,
+     "onward": 0.24742268041237114,
+     "next": [
+      {
+       "key": "/appointment",
+       "views": 2400,
+       "bundles": 24,
+       "share": 0.24742268041237114,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 9700,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 7200,
+       "bundles": 72,
+       "share": 0.7422680412371134,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/offers/free-checking",
+     "views": 9100,
+     "bundles": 91,
+     "share": 0.12280701754385964,
+     "lowSample": false,
+     "onward": 0.04395604395604396,
+     "next": [
+      {
+       "key": "/checking",
+       "views": 400,
+       "bundles": 4,
+       "share": 0.04395604395604396,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 9100,
+     "nextAll": []
+    },
+    {
+     "path": "/home-equity",
+     "views": 7700,
+     "bundles": 77,
+     "share": 0.1039136302294197,
+     "lowSample": false,
+     "onward": 0.15584415584415584,
+     "next": [
+      {
+       "key": "/appointment",
+       "views": 1200,
+       "bundles": 12,
+       "share": 0.15584415584415584,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 34700,
+     "nextAll": []
+    }
+   ],
+   "desktop": [
+    {
+     "path": "/checking",
+     "views": 17700,
+     "bundles": 177,
+     "share": 0.300509337860781,
+     "lowSample": false,
+     "onward": 0.4067796610169492,
+     "next": [
+      {
+       "key": "/offers/free-checking",
+       "views": 3100,
+       "bundles": 31,
+       "share": 0.1751412429378531,
+       "lowSample": false
+      },
+      {
+       "key": "/appointment",
+       "views": 3000,
+       "bundles": 30,
+       "share": 0.1694915254237288,
+       "lowSample": false
+      },
+      {
+       "key": "/savings",
+       "views": 1100,
+       "bundles": 11,
+       "share": 0.062146892655367235,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 60300,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 20200,
+       "bundles": 202,
+       "share": 0.33499170812603646,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/credit-cards",
+     "views": 7100,
+     "bundles": 71,
+     "share": 0.12054329371816638,
+     "lowSample": false,
+     "onward": 0.04225352112676056,
+     "next": [
+      {
+       "key": "/checking",
+       "views": 300,
+       "bundles": 3,
+       "share": 0.04225352112676056,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 38200,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 14200,
+       "bundles": 142,
+       "share": 0.3717277486910995,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/savings",
+     "views": 6700,
+     "bundles": 67,
+     "share": 0.11375212224108659,
+     "lowSample": false,
+     "onward": 0.13432835820895522,
+     "next": [
+      {
+       "key": "/appointment",
+       "views": 600,
+       "bundles": 6,
+       "share": 0.08955223880597014,
+       "lowSample": true
+      },
+      {
+       "key": "/checking",
+       "views": 300,
+       "bundles": 3,
+       "share": 0.04477611940298507,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 40300,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 13900,
+       "bundles": 139,
+       "share": 0.34491315136476425,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/locator",
+     "views": 6600,
+     "bundles": 66,
+     "share": 0.11205432937181664,
+     "lowSample": false,
+     "onward": 0.2727272727272727,
+     "next": [
+      {
+       "key": "/appointment",
+       "views": 1800,
+       "bundles": 18,
+       "share": 0.2727272727272727,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 6600,
+     "nextAll": [
+      {
+       "key": "/",
+       "views": 7100,
+       "bundles": 71,
+       "share": 1.0757575757575757,
+       "lowSample": false
+      }
+     ]
+    },
+    {
+     "path": "/offers/free-checking",
+     "views": 5900,
+     "bundles": 59,
+     "share": 0.100169779286927,
+     "lowSample": false,
+     "onward": 0.15254237288135594,
+     "next": [
+      {
+       "key": "/checking",
+       "views": 900,
+       "bundles": 9,
+       "share": 0.15254237288135594,
+       "lowSample": true
+      }
+     ],
+     "viewsAll": 5900,
+     "nextAll": []
+    }
+   ]
+  },
+  "conversion": {
+   "click": "get started|open|apply|appointment|schedule",
+   "path": "^/(appointment|offers/)",
+   "label": "open an account or book a banker"
+  },
+  "assists": {
+   "goalViews": 43500,
+   "views": 243400,
+   "rate": 0.17871815940838126,
+   "pages": [
+    {
+     "path": "/",
+     "views": 133000,
+     "bundles": 1330,
+     "goalViews": 43500,
+     "share": 1,
+     "rate": 0.32706766917293234,
+     "lift": 1.8300751879699249,
+     "lowSample": false
+    }
+   ]
+  }
+ },
+ "experiences": [
+  {
+   "id": "agent",
+   "label": "Personal agent: plain & actionable",
+   "views": 4200,
+   "share": 0.007
+  },
+  {
+   "id": "customer",
+   "label": "Customer: sign-in first",
+   "views": 105800,
+   "share": 0.17633333333333334
+  },
+  {
+   "id": "prospect",
+   "label": "Prospect: answer & act",
+   "views": 120100,
+   "share": 0.20016666666666666
+  },
+  {
+   "id": "mobile",
+   "label": "Mobile: quick tasks",
+   "views": 263600,
+   "share": 0.43933333333333335
+  },
+  {
+   "id": "default",
+   "label": "Original homepage",
+   "views": 106300,
+   "share": 0.17716666666666667
+  }
+ ],
+ "today": {
+  "didNothing": 0.224,
+  "navigated": 0.6245,
+  "topClicks": [
+   {
+    "click": "olb.citizensbank.com/login",
+    "link": true,
+    "share": 0.3968333333333333,
+    "bundles": 2381
+   },
+   {
+    "click": "/checking",
+    "link": true,
+    "share": 0.06133333333333333,
+    "bundles": 368
+   },
+   {
+    "click": "header button.nav-hamburger",
+    "link": false,
+    "share": 0.04033333333333333,
+    "bundles": 242
+   },
+   {
+    "click": "/savings",
+    "link": true,
+    "share": 0.029,
+    "bundles": 174
+   },
+   {
+    "click": "/locator",
+    "link": true,
+    "share": 0.027166666666666665,
+    "bundles": 163
+   }
+  ],
+  "weeks": [
+   138600,
+   133900,
+   142400,
+   144800,
+   40300
+  ],
+  "devices": [
+   {
+    "key": "mobile",
+    "views": 330000,
+    "bundles": 3300,
+    "share": 0.55
+   },
+   {
+    "key": "desktop",
+    "views": 265800,
+    "bundles": 2658,
+    "share": 0.443
+   },
+   {
+    "key": "bot",
+    "views": 4200,
+    "bundles": 42,
+    "share": 0.007
+   }
+  ]
+ }
+}

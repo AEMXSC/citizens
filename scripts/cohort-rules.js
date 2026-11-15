@@ -27,10 +27,11 @@ export default {
     ['business', 'small-business|business'],
   ],
 
-  // demo panel Insights mode: where size.js output is published (not published for this demo)
+  // demo panel Insights mode: size.js output. ILLUSTRATIVE: sized on synthetic bundles
+  // (citizens-poc-work/synth/gen.mjs), not measured traffic. Swap in real Optel bundles later.
   insights: {
     src: '/cohorts/cohorts.json',
-    label: 'Modelled',
+    label: 'Illustrative data',
     pages: {
       '/checking': 'Checking',
       '/savings': 'Savings',

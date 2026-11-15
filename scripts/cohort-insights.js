@@ -81,7 +81,7 @@ export function ruleFacts(data, id, rules = {}) {
   if (!data?.rules) return null;
   const m = data.meta || {};
   const weeks = m.fullWeeks || m.weeks;
-  const source = `Optel · ${m.domain || ''}${m.path || ''} · ${m.start ? `${day(m.start)} – ${day(m.end)}` : ''} · ${num(m.views || 0)} views (${num(m.bundles || 0)} sampled)`;
+  const source = `${rules.insights?.label || 'Optel'} · ${m.domain || ''}${m.path || ''} · ${m.start ? `${day(m.start)} – ${day(m.end)}` : ''} · ${num(m.views || 0)} views (${num(m.bundles || 0)} sampled)`;
   if (!id) {
     const d = (data.experiences || []).find((e) => e.id === 'default');
     const lines = [];
